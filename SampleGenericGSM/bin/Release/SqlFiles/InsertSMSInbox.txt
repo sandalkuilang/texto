@@ -1,0 +1,12 @@
+DECLARE @sequence INT
+
+SELECT @sequence = ISNULL(MAX(SeqNbr), 0) + 1 FROM dbo.Inbox
+WHERE Sender = @Sender 
+
+INSERT  INTO dbo.Inbox
+SELECT  @Sender , -- Sender - varchar(30)
+		@sequence, -- sequence - int
+        @Message , -- Sessage - varchar(2000)
+        @Time , -- Time - datetime
+        @ReceiverOperator  -- ReceiverOperator - varchar(30)
+        

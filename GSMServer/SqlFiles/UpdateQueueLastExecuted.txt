@@ -1,0 +1,4 @@
+﻿ UPDATE dbo.QueueWorkItem
+ SET    LastExecuted = GETDATE() ,
+        Status = @Status
+ WHERE  SeqNbr = @SeqNbr	

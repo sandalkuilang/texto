@@ -1,0 +1,68 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <x:Array x:Key="EncodingNames" Type="sys:String">
+        <sys:String>IBM037</sys:String>
+        <sys:String>IBM437</sys:String>
+        <sys:String>IBM500</sys:String>
+        <sys:String>ASMO-708</sys:String>
+        <sys:String>DOS-720</sys:String>
+        <sys:String>ibm737</sys:String>
+        <sys:String>ibm775</sys:String>
+        <sys:String>ibm850</sys:String>
+        <sys:String>ibm852</sys:String>
+        <sys:String>IBM855</sys:String>
+        <sys:String>ibm857</sys:String>
+        <sys:String>IBM00858</sys:String>
+        <sys:String>IBM860</sys:String>
+        <sys:String>ibm861</sys:String>
+        <sys:String>DOS-862</sys:String>
+        <sys:String>IBM863</sys:String>
+        <sys:String>IBM864</sys:String>
+        <sys:String>IBM865</sys:String>
+        <sys:String>cp866</sys:String>
+        <sys:String>ibm869</sys:String>
+        <sys:String>IBM870</sys:String>
+        <sys:String>windows-874</sys:String>
+        <sys:String>cp875</sys:String>
+        <sys:String>shift_jis</sys:String>
+        <sys:String>gb2312</sys:String>
+        <sys:String>ks_c_5601-1987</sys:String>
+        <sys:String>big5</sys:String>
+        <sys:String>IBM1026</sys:String>
+        <sys:String>IBM01047</sys:String>
+        <sys:String>IBM01140</sys:String>
+        <sys:String>IBM01141</sys:String>
+        <sys:String>IBM01142</sys:String>
+        <sys:String>IBM01143</sys:String>
+        <sys:String>IBM01144</sys:String>
+        <sys:String>IBM01145</sys:String>
+        <sys:String>IBM01146</sys:String>
+        <sys:String>IBM01147</sys:String>
+        <sys:String>IBM01148</sys:String>
+        <sys:String>IBM01149</sys:String>
+        <sys:String>utf-16</sys:String>
+        <sys:String>unicodeFFFE</sys:String>
+        <sys:String>windows-1250</sys:String>
+        <sys:String>windows-1251</sys:String>
+        <sys:String>Windows-1252</sys:String>
+        <sys:String>windows-1253</sys:String>
+        <sys:String>windows-1254</sys:String>
+        <sys:String>windows-1255</sys:String>
+        <sys:String>windows-1256</sys:String>
+        <sys:String>windows-1257</sys:String>
+        <sys:String>windows-1258</sys:String>
+        <sys:String>Johab</sys:String>
+        <sys:String>utf-32</sys:String>
+        <sys:String>utf-32BE</sys:String>
+        <sys:String>us-ascii</sys:String>
+        <sys:String>utf-7</sys:String>
+        <sys:String>utf-8</sys:String> 
+    </x:Array>
+    
+    <x:Array x:Key="CountryCodes" Type="sys:String">
+        
+    </x:Array>
+    
+</ResourceDictionary>

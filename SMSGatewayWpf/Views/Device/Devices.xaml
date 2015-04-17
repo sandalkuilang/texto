@@ -1,0 +1,86 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Devices"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Views="clr-namespace:SMSGatewayWpf.Views.Device"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:ctrls="clr-namespace:SMSGatewayWpf.Styles.Controls"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+                <ResourceDictionary Source="../../Styles/ButtonStyle.xaml" />
+                <!--<ResourceDictionary Source="../../Styles/MetroListBoxItemStyle.xaml" />-->
+                <ResourceDictionary Source="../../Styles/MetroListBoxStyle.xaml" /> 
+            </ResourceDictionary.MergedDictionaries>
+            
+            <DataTemplate x:Key="Port">
+                <Views:Port></Views:Port>
+            </DataTemplate>
+            <DataTemplate x:Key="Configuration">
+                <Views:Configuration></Views:Configuration>
+            </DataTemplate>
+            <DataTemplate x:Key="General">
+                <Views:General></Views:General>
+            </DataTemplate>
+            <DataTemplate x:Key="Call">
+                <Views:Call></Views:Call>
+            </DataTemplate>
+            <DataTemplate x:Key="Phonebook">
+                <Views:Phonebook></Views:Phonebook>
+            </DataTemplate>
+            <DataTemplate x:Key="SMS">
+                <Views:SMS></Views:SMS>
+            </DataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions> 
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.ColumnSpan="2"
+                Background="Transparent" BorderThickness="0,0,1,0" 
+                BorderBrush="{StaticResource BorderContent}">
+            <!--<ListBox x:Name="listDevices" FontSize="14"
+                     ItemContainerStyle="{DynamicResource MetroListBoxItemStyle}"
+                    Width="200" VerticalContentAlignment="Center">
+                <ListBoxItem Height="40">Ports</ListBoxItem>
+                <ListBoxItem Height="40">Configuration</ListBoxItem>
+                <ListBoxItem Height="40">General</ListBoxItem>
+                <ListBoxItem Height="40">SMS</ListBoxItem>
+                <ListBoxItem Height="40">Call</ListBoxItem> 
+            </ListBox>-->
+            <ctrls:ModernListBox SelectedSource="../../Views/Device/Port.xaml" Layout="List" ListWidth="192"  VerticalAlignment="Stretch">
+                <ctrls:ModernListBox.Links>
+                    <mui:Link DisplayName="Ports"  Source="../../Views/Device/Port.xaml" />
+                    <!--<mui:Link DisplayName="Configuration" Source="../../Views/Device/Configuration.xaml" />-->
+                    <mui:Link DisplayName="General" Source="../../Views/Device/General.xaml" />
+                    <mui:Link DisplayName="SMS" Source="../../Views/Device/SMS.xaml"/>
+                    <mui:Link DisplayName="Call" Source="../../Views/Device/Call.xaml"/>
+                </ctrls:ModernListBox.Links>
+            </ctrls:ModernListBox>
+        </Border>
+
+        <!--<Controls:TransitioningContentControl x:Name="transitionContentDevices"
+                                              Transition="Left" 
+                                              Grid.Row="1" Grid.Column="1"
+                                              Content="{Binding ElementName=listDevices,Path=SelectedItem}">
+        </Controls:TransitioningContentControl>-->
+    </Grid>
+</UserControl>

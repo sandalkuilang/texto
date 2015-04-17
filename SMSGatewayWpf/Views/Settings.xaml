@@ -1,0 +1,313 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Views="clr-namespace:SMSGatewayWpf.Views"
+             xmlns:ctrls="clr-namespace:SMSGatewayWpf.ViewModels"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+             xmlns:rules="clr-namespace:SMSGatewayWpf.ViewModels.ValidationRules"   
+             xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             Margin="0,0,0,0" 
+             mc:Ignorable="d"
+             d:DesignHeight="600"
+             d:DesignWidth="800" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+                <ResourceDictionary Source="../Styles/CheckBoxStyle.xaml" />
+                <ResourceDictionary Source="../Styles/BackButtonMetroStyle.xaml" />
+                <ResourceDictionary Source="../Styles/TextBoxStyle.xaml" />
+                <ResourceDictionary Source="../Styles/PasswordBoxStyle.xaml" />
+                <ResourceDictionary Source="../Styles/ButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17"/>
+            <RowDefinition Height="458*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="221*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Name="btnBack"
+                Grid.Column="0" Grid.Row="1" 
+                Width="50" 
+                Height="50" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Left" 
+                Margin="15,0,0,0" 
+                Style="{DynamicResource MetroBackButton}"
+                Click="btnBack_Click">
+            <Path 
+                Width="40" Height="40" 
+                x:Name="CheckMark"
+                SnapsToDevicePixels="False" 
+                Stroke="{StaticResource ArrowBrush}"
+                StrokeThickness="2.5" 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" 
+                Data="M 15 9 v 15 h 15" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="45"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+        </Button>
+
+        <ScrollViewer Grid.Column="1" Grid.Row="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110"/>
+                    <RowDefinition Height="175"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="220"/>
+                    <RowDefinition Height="260"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" 
+                       Content="Notifications" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0" 
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" />
+                    <StackPanel Grid.Column="0" Grid.Row="1" Height="80" VerticalAlignment="Top">
+                        <CheckBox Width="Auto" 
+                                  HorizontalAlignment="Left" 
+                                  Content="Desktop notifications" 
+                                  Margin="0, 10, 0, 0" IsEnabled="False"
+                                  IsChecked="{Binding Path=General.DesktopNotifications, UpdateSourceTrigger=PropertyChanged}" />
+                        <CheckBox 
+                            Width="Auto" 
+                            HorizontalAlignment="Left" 
+                            Content="Sound" 
+                            Margin="0, 10, 0, 0" 
+                            IsChecked="{Binding Path=General.Sounds, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" 
+                       Content="General" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0" 
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" />
+                    <StackPanel Grid.Column="0" Grid.Row="1">
+                        <CheckBox 
+                            Width="Auto" 
+                            HorizontalAlignment="Left" 
+                            Content="Show tray icon" 
+                            Margin="0, 10, 0, 0" IsEnabled="False"
+                            IsChecked="{Binding Path=General.ShowTrayIcon, UpdateSourceTrigger=PropertyChanged}"/>
+                        <CheckBox 
+                            Width="Auto" 
+                            HorizontalAlignment="Left" 
+                            Content="Show taskbar icon" 
+                            Margin="0, 10, 0, 0" 
+                            IsChecked="{Binding Path=General.ShowTaskbarIcon, UpdateSourceTrigger=PropertyChanged}"/>
+                        <CheckBox 
+                            Width="Auto" 
+                            HorizontalAlignment="Left" 
+                            Content="Launch when system starts" 
+                            Margin="0, 10, 0, 0"
+                            IsChecked="{Binding Path=General.LaunchWhenSystemStarts, UpdateSourceTrigger=PropertyChanged}"/>
+                        <CheckBox 
+                            Width="Auto" 
+                            HorizontalAlignment="Left" 
+                            Content="Launch minimized" 
+                            Margin="0, 10, 0, 0"
+                            IsChecked="{Binding Path=General.LaunchMinimized, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" 
+                       Content="Encryption Key" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0"  
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" />
+                    <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0" Margin="0,10,0,0">
+                                <TextBox Margin="0,0,0,10" HorizontalAlignment="Left" 
+                                         Width="450" Height="140" AcceptsReturn="True" 
+                                         VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" FontSize="16" Tag="Key"
+                                         Text="{Binding Path=Encryption.Key, UpdateSourceTrigger=PropertyChanged}"> 
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9\, ]+$" MaxLength="700" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" 
+                       Content="Gateway Connection" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0"  
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" />
+                    <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0" Margin="0,10,0,0">
+                                <TextBox Margin="0,0,0,10" 
+                                         HorizontalAlignment="Left" 
+                                         Width="190" 
+                                         FontSize="16" 
+                                         Tag="IP Address" 
+                                         Text="{Binding Path=Gateway.IPAddress, UpdateSourceTrigger=PropertyChanged}"> 
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9.]+$" MaxLength="15" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                                <TextBox Margin="0,0,0,10" 
+                                         HorizontalAlignment="Left" 
+                                         Width="190" 
+                                         FontSize="16" 
+                                         Tag="Port" 
+                                         Text="{Binding Path=Gateway.Port, UpdateSourceTrigger=PropertyChanged}"> 
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="10" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+
+                            </StackPanel>
+                        </Grid> 
+                        <Grid>
+                            <Button 
+                                IsEnabled="{Binding Path=Commands.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                Content="{Binding Path=Commands.ButtonContent, UpdateSourceTrigger=PropertyChanged}" 
+                                HorizontalAlignment="Left"
+                                Command="{Binding Path=Commands.RouteConnectionCommand}"/>
+                            
+                            <Controls:ProgressRing Width="30" Height="30" 
+                                                   IsActive="{Binding Path=Commands.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="140,10,0,10" 
+                                                   HorizontalAlignment="Left"/>
+                        </Grid> 
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="4" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" 
+                       Content="Database" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0" 
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" />
+                    <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Top">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0" Margin="0,10,0,0">
+                                <TextBox Margin="0,0,0,10" 
+                                         HorizontalAlignment="Left"
+                                         Width="190" 
+                                         FontSize="16" 
+                                         Tag="Server name" 
+                                         Text="{Binding Path=Database.Server, UpdateSourceTrigger=PropertyChanged}"/>
+                                <TextBox Margin="0,0,0,10" 
+                                         HorizontalAlignment="Left" 
+                                         Width="190" 
+                                         FontSize="16" 
+                                         Tag="Name" 
+                                         Text="{Binding Path=Database.Name, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBox Margin="0,0,0,10" 
+                                         HorizontalAlignment="Left" 
+                                         Width="190" 
+                                         FontSize="16" 
+                                         Tag="Login" 
+                                         Text="{Binding Path=Database.Username, UpdateSourceTrigger=PropertyChanged}" />
+                                <PasswordBox Margin="0,0,0,10" 
+                                        FontSize="16"  
+                                        ctrls:PasswordHelper.PlaceHolderText="Password"
+                                        HorizontalAlignment="Left" Width="190" />
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="5" Grid.Column="2">
+                    <Button 
+                        Content="Save" 
+                        HorizontalAlignment="Left"
+                        Command="{Binding Path=Commands.SaveCommand}"/>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+
+</UserControl>

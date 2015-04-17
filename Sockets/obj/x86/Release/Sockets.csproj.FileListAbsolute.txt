@@ -1,0 +1,5 @@
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\Sockets.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\Sockets.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Sockets\obj\x86\Release\Sockets.csprojResolveAssemblyReference.cache
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Sockets\obj\x86\Release\Sockets.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Sockets\obj\x86\Release\Sockets.pdb

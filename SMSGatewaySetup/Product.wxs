@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:sql="http://schemas.microsoft.com/wix/SqlExtension"> 
+	<Product Id="*" Name="SMS Gateway Server" Language="1033" Version="1.1.5189" Manufacturer="Toyota Motor Manufacturing Indonesia" UpgradeCode="5306bc81-2be2-4837-85fa-422cace6178f">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="SMSGWSetup" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" /> 
+    </Feature>
+
+   
+  </Product>
+   
+  
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="TMMIN">
+          <Directory Id="PRODUCTFOLDER" Name="SMS Gateway Server" />
+        </Directory>
+			</Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="SMS Gateway Server">
+        </Directory>
+      </Directory>
+		</Directory> 
+	</Fragment>
+   
+  <!--
+    Create shortcuts and registry value that indicates database not yet created
+  -->
+  <Fragment>
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="CF56FD4E-3DC5-48dd-9364-FCC677ACE4E0">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="SMS Gateway Server"
+                  Target="[PRODUCTFOLDER]smsgatewayserver.exe"
+                  WorkingDirectory="PRODUCTFOLDER">
+        </Shortcut>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\TMMIN\SMSGateway" Name="Install" Type="integer" Value="0" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  
+  <!--
+    copy files
+  -->
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="PRODUCTFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			 <Component Id="ProductComponent" Guid="16B64C58-C1AB-4a5e-81C0-1B3DB958E56E">
+         <File Id="SqlFilesInsertSMSInbox" Source="..\bin\SqlFiles\InsertSMSInbox.txt" />
+         <File Id="SqlFilesInsertSMSOutbox" Source="..\bin\SqlFiles\InsertSMSOutbox.txt" />
+         <File Id="Config" Source="..\bin\Config.xml" />
+         <File Id="Cryptography" Source="..\bin\Cryptography.dll" />
+         <File Id="Database" Source="..\bin\Database.dll" />
+         <File Id="DatabaseDapperClient" Source="..\bin\Database.DapperClient.dll" />
+         <File Id="GSMCommunication" Source="..\bin\GSMCommunication.dll" />
+         <File Id="GSMDatabaseLogging" Source="..\bin\GSMDatabaseLogging.dll" />
+         <File Id="GSMServer" Source="..\bin\GSMServer.dll" />
+         <File Id="NewtonsoftJson" Source="..\bin\Newtonsoft.Json.dll" />
+         <File Id="SMSGatewayServer" Source="..\bin\SMSGatewayServer.exe" />
+         <File Id="SMSGatewayServerConfig" Source="..\bin\SMSGatewayServer.exe.config" />
+         <File Id="Sockets" Source="..\bin\Sockets.dll" />
+          
+       </Component> 
+		</ComponentGroup> 
+	</Fragment>
+ 
+</Wix>

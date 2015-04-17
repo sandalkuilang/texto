@@ -1,0 +1,10 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Release\SMSTest.exe.config
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Release\SMSTest.exe
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Release\SMSTest.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Release\Cryptography.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Release\GSMClient.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Release\GSMServerModel.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Release\Newtonsoft.Json.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\obj\Release\SMSTest.exe
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\obj\Release\SMSTest.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\obj\Release\SMSTest.csprojResolveAssemblyReference.cache

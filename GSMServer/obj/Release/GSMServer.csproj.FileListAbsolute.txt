@@ -1,0 +1,16 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\SqlFiles\InsertSMSInbox.txt
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\SqlFiles\InsertSMSOutbox.txt
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\config.xml
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMServer.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMServer.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMServer\obj\Release\GSMServer.csprojResolveAssemblyReference.cache
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMServer\obj\Release\GSMServer.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMServer\obj\Release\GSMServer.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\SqlFiles\CountQueueWorkItem.txt
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\SqlFiles\GetAllQueueWorkItem.txt
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\SqlFiles\GetQueueWorkItem.txt
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMServer.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMServer.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServer\obj\Release\GSMServer.csprojResolveAssemblyReference.cache
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServer\obj\Release\GSMServer.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServer\obj\Release\GSMServer.pdb

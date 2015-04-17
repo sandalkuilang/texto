@@ -1,0 +1,112 @@
+﻿/* Listing Command String */
+
+There are 3 Interfaces Contract that used communicate to the server:
+	1. ISMS - contain methods used to manage SMS (Send, Read, Delete etc.)
+	2. ICall - contain methods used to manage Call (Dial, SendUSSD, etc.)
+	3. IPhoneBook - contain methods used to manage Call (Write, Find, Read etc.)
+
+
+	1. SMS
+		- ISMS.Send
+			a. parameter: 
+				- message: string contain text to be send
+				- number: the number of recipient
+			b. example:
+				- ISMS.Send(+param: message=lorem ipsum +param: number=0888881111)
+				- ISMS.Send(+param: number=0888881111 +param: message=lorem ipsum )
+
+		- ISMS.Read
+			a. parameter:
+				none
+			b. example:
+				- ISMS.Read()
+
+		- ISMS.ReadAll
+			a. parameter:
+				none
+			b. example:
+				- ISMS.ReadAll()
+
+		- ISMS.Delete
+			a. parameter:
+				- index: index of message on SIM Card
+			b. example:
+				- ISMS.Delete(+param: index=1)
+				- ISMS.Delete(+param: index=0)
+				- ISMS.Delete(+param: index=47)
+
+		- ISMS.DeleteAll
+			a. parameter:
+				none
+			b. example:
+				- ISMS.DeleteAll()
+
+	2. ICall
+		- ICall.Dial
+			a. parameter
+				- number: the number to dial
+			b. example
+				ICall.Dial(+param: number=081238120)
+
+		- ICall.Hang
+			a. parameter
+				- number: the number to dial
+			b. example
+				ICall.Hang(+param: number=081238120)
+
+		- ICall.Answer
+			a. parameter
+				none
+			b. example
+				ICall.Answer()
+
+		- ICall.SendUSSD
+			a. parameter
+				- code: always 1
+				- number: the number of USSD
+			b. example
+				ICall.SendUSSD(+param: code=1 +param: number=*888#)
+	3. IPhoneBook
+		- IPhoneBook.FindPhoneBook
+			1. parameter
+				- memory: the phonebook memory storage
+					•  "SM": ADN Abbreviated Dialing Numbers (SIM phonebook) 
+					•  "FD": FDN Fixed Dialing Numbers (SIM restricted phonebook) 
+					•  "ON": MSISDN (SIM own numbers) 
+					•  "EN": ECC Emergency Call Codes (SIM or ME) 
+					•  "LD": LND Last Number Dialed 
+					•  "MC": ME missed (unanswered received) calls list 
+					•  "ME": ME phonebook 
+					•  "MT": combined ME and SIM phonebook (ME+SM) 
+					•  "RC": ME received calls list 
+					•  "SN": SDN Service Dialing Numbers (SIM special service numbers) 
+				- name: Searched pattern string (depends on the format of data stored in the phonebooks)
+			2. example
+				IPhoneBook.FindPhoneBook(+param: memory=SM +param: name=robert)
+		- IPhoneBook.ReadPhoneBook
+			1. parameter
+				- memory: the phonebook memory storage
+				- fromIndex: start index of contacts
+				- toIndex: end index of contacts
+			2. example
+				IPhoneBook.ReadPhoneBook(+param: memory=SM +param: fromIndex=1 +param: toIndex=10)
+				IPhoneBook.ReadPhoneBook(+param: memory=ME +param: fromIndex=1 +param: toIndex=100)
+		- IPhoneBook.GetInfo
+			1. parameter
+				null
+			2. example
+				IPhoneBook.GetInfo()
+		- IPhoneBook.SetPhoneBookMemory
+			1. parameter
+				- memory: the phonebook memory storage
+			2. example
+				IPhoneBook.SetPhoneBookMemory(+param: memory=SM)
+		- IPhoneBook.WritePhoneBook
+			1. parameter
+				- memory: the phonebook memory storage
+				- index: Integer type value depending on the capacity of the phonebook memory. 
+				- name: the name of phonenumber
+				- phoneNumber: Phone number in ASCII format
+			2. example
+				IPhoneBook.SetPhoneBookMemory(+param: memory=SM +param: index=15 +param: name=robert +param; phoneNumber=08212312)
+				IPhoneBook.SetPhoneBookMemory(+param: memory=ME +param: index=2 +param: name=albert +param; phoneNumber=012333)

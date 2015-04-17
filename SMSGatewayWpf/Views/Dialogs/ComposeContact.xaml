@@ -1,0 +1,92 @@
+﻿<Controls:MetroWindow x:Class="SMSGatewayWpf.Views.Dialogs.ComposeContact"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:message="clr-namespace:SMSGatewayWpf.ViewModels.Message"
+        xmlns:rules="clr-namespace:SMSGatewayWpf.ViewModels.ValidationRules"   
+        xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:styles="clr-namespace:SMSGatewayWpf.Styles"
+        WindowStartupLocation="CenterScreen"  
+        ShowMaxRestoreButton="False"
+        ShowMinButton="False"
+        ResizeMode="NoResize"  
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        Title="New contact" Height="220" Width="400">
+
+    <Control.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Styles/ButtonStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary> 
+    </Control.Resources>
+
+
+    <Grid RenderOptions.ClearTypeHint="Enabled" TextOptions.TextFormattingMode="Display"
+          VerticalAlignment="Stretch">
+        <Border BorderBrush="LightBlue" BorderThickness="1" Margin="0,0,0,0" VerticalAlignment="Stretch" Height="Auto">
+            <Controls:TransitioningContentControl Width="Auto" x:Name="transitionComposeContact"
+                Transition="Left" Margin="9,-1,-9,1">
+                <Grid Margin="20,20,20,20" >
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="0 0 0 10" />
+                        </Style>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="Margin" Value="0 0 0 10" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="Name"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" AcceptsReturn="True" Padding="3"
+                             Width="160"
+                             Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}"
+                             Margin="0,0,0,15" HorizontalAlignment="Left"
+                             Controls:TextBoxHelper.Watermark="Enter your name" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Content="Phone number"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" AcceptsReturn="True" Padding="3"
+                             Width="160"
+                             Text="{Binding Path=PhoneNumber, UpdateSourceTrigger=PropertyChanged}"
+                             HorizontalAlignment="Left" Margin="0,0,0,15"
+                             Controls:TextBoxHelper.Watermark="Enter nummber" >
+                             <interactivity:Interaction.Behaviors>
+                                <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="15" />
+                             </interactivity:Interaction.Behaviors>
+                    </TextBox>
+
+
+                    <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" 
+                                Orientation="Horizontal" Margin="0 30 0 0">
+                        <Button x:Name="btnOK" Content="OK" 
+                                Click="btnOK_Click"
+                                Command="{Binding SaveCommand}"
+                                CommandParameter="{Binding}"
+                                Width="90" Height="40" Margin="0 0 15 0"
+                                />
+                        <Button x:Name="btnCancel" Content="Cancel" Width="90" 
+                                Height="40"
+                                Click="btnCancel_Click"/>
+
+                        <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="20,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </Controls:TransitioningContentControl>
+        </Border>
+    </Grid>
+</Controls:MetroWindow>

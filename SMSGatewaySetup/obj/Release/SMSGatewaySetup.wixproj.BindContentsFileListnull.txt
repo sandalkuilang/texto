@@ -1,0 +1,13 @@
+..\output\Config.xml
+..\output\Cryptography.dll
+..\output\Database.dll
+..\output\Database.DapperClient.dll
+..\output\GSMCommunication.dll
+..\output\GSMDatabaseLogging.dll
+..\output\GSMServer.dll
+..\output\Newtonsoft.Json.dll
+..\output\SMSGatewayServer.exe
+..\output\SMSGatewayServer.exe.config
+..\output\Sockets.dll
+..\output\SqlFiles\InsertSMSInbox.txt
+..\output\SqlFiles\InsertSMSOutbox.txt

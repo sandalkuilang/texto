@@ -1,0 +1,4 @@
+﻿SELECT  SeqNbr ,
+        Command
+FROM    dbo.QueueWorkItem
+ORDER BY SeqNbr ASC

@@ -1,0 +1,7 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSGatewaySetup\bin\Debug\cab1.cab
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSGatewaySetup\bin\Debug\SMSGWSetup.msi
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSGatewaySetup\bin\Debug\SMSGWSetup.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\SMSGWSetup.wixproj.BindContentsFileListnull.txt
+obj\Debug\SMSGWSetup.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SMSGWSetup.wixproj.BindBuiltOutputsFileListnull.txt

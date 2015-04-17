@@ -1,0 +1,14 @@
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\UnitTestGSMClient.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\UnitTestGSMClient.pdb
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\Cryptography.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\GSMClient.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\GSMServerModel.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\Texaco.Database.Petapoco.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\Texaco.Database.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\Newtonsoft.Json.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\Cryptography.pdb
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\GSMClient.pdb
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\bin\Release\GSMServerModel.pdb
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\obj\Release\UnitTestGSMClient.csprojResolveAssemblyReference.cache
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\obj\Release\UnitTestGSMClient.dll
+D:\git.toyota.co.id\Project-SMSG\UnitTestGSMClient\obj\Release\UnitTestGSMClient.pdb

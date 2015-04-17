@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SMSGatewayWpf.ViewModels.Message
+{
+    public interface IDataSyncronize
+    {
+        void StopSyncronizing();
+        void ForceSyncronizing();
+        void StartSyncronizing();
+    }
+}

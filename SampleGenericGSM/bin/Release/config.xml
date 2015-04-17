@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <General>
+    <!-- The port used client to connect the server-->
+    <DefaultPort>13005</DefaultPort>
+    
+    <!-- The IP Address used client to connect the server -->
+    <!-- if the PC is connected to the network it will have 2 IP Address, 127.0.0.1 (localhost) and the IP address of network-->
+    <!--<DefaultIP>127.0.0.1</DefaultIP>-->
+    
+    <!-- The Encoding used to convert string -->
+    <DefaultEncoding>ASCII</DefaultEncoding>
+
+    <!-- The Country code of your Network Telecommunication -->
+    <CountryCode>62</CountryCode>
+
+    <!-- The signature used to indicates the sender request if valid -->
+    <SMSGWSignature>TMMIN</SMSGWSignature>
+
+    <!--The phonebook name used by the server to check own number -->
+    <PrefixOwnNumber>own number</PrefixOwnNumber>
+
+    <!-- The Interval used by server to check queue of request -->
+    <IntervalWorkerQueue>10000</IntervalWorkerQueue>
+
+    <!-- The Interval used by server to read incoming messaeg -->
+    <IntervalReadMessage>5000</IntervalReadMessage>
+    
+    <!-- Indicates to the server, whether will be auto check all port installed on the system -->
+    <!--<EnumeratePort>Auto</EnumeratePort> --><!--Custom or Auto-->
+  </General>
+  <SerialPorts>
+    <!-- example
+      <SerialPort 
+        PortName="COMxxxx"        The port to use (for example, COM1). 
+        BaudRate="xxxxxx"         The baud rate. (Type: System.Int32)
+        Parity=""                 One of the Parity values. see http://msdn.microsoft.com/en-us/library/system.io.ports.parity%28v=vs.110%29.aspx
+        DataBits=""               The data bits value. (Type: System.Int32) 
+        StopBits=""               One of the StopBits values. see http://msdn.microsoft.com/en-us/library/system.io.ports.stopbits%28v=vs.110%29.aspx
+        Handshake=""              Handshaking protocol for serial port transmission of data. see http://msdn.microsoft.com/en-us/library/system.io.ports.handshake%28v=vs.110%29.aspx
+        ServiceCenter="62xxxxxxx" When you use Handphone/Cellphone as a modem, please specify the Service Center of the SIM Card. 
+        PDUMode="true/false"      SMS Mode, it will PDU Mode or Text Mode
+      />-->
+
+    <SerialPort PortName="COM3" BaudRate="115200" Parity="None" DataBits="8" StopBits="One" Handshake="RequestToSend" PDUMode="true"/>
+    
+    <!-- COM4 and COM5 is disable due to credit balance reach limit-->
+    <!--
+    <SerialPort PortName="COM4" BaudRate="115200" Parity="None" DataBits="8" StopBits="One" Handshake="RequestToSend" PDUMode="true"/>
+    <SerialPort PortName="COM5" BaudRate="115200" Parity="None" DataBits="8" StopBits="One" Handshake="RequestToSend" PDUMode="true"/>
+    -->
+
+  </SerialPorts>
+  <Plugin>
+    <Assembly AssemblyFile="GSMDatabaseLogging" Type="GSMDatabaseLogging.Logging"/>
+  </Plugin>
+</Config>

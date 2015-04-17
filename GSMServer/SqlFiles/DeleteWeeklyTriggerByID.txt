@@ -1,0 +1,2 @@
+﻿DELETE FROM dbo.WeeklyTrigger
+WHERE ID = @ID

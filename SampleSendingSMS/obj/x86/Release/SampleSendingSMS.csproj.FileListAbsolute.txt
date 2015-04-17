@@ -1,0 +1,16 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\SampleSendingSMS.exe.config
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\SampleSendingSMS.exe
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\SampleSendingSMS.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\Cryptography.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\GSMClient.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\GSMServerModel.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\Newtonsoft.Json.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\Cryptography.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\GSMClient.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\bin\Release\GSMServerModel.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\obj\x86\Release\SampleSendingSMS.csprojResolveAssemblyReference.cache
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\obj\x86\Release\SampleSendingSMS.FormMain.resources
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\obj\x86\Release\SampleSendingSMS.Properties.Resources.resources
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\obj\x86\Release\SampleSendingSMS.csproj.GenerateResource.Cache
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\obj\x86\Release\SampleSendingSMS.exe
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SampleSendingSMS\obj\x86\Release\SampleSendingSMS.pdb

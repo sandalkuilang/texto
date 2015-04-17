@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31B4B576-5CDD-41EB-AC71-8D4D95BD2588}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMSGatewayWpf</RootNamespace>
+    <AssemblyName>texto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>texto-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cryptography">
+      <HintPath>..\SMSGateway\GSMClient\bin\Debug\Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="FirstFloor.ModernUI">
+      <HintPath>libs\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMServerModel">
+      <HintPath>..\SMSGateway\GSMClient\bin\Debug\GSMServerModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=0.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.Resources, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\MahApps.Metro.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>libs\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Texaco.Container, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Texaco.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Texaco.Database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Texaco.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Texaco.Database.Petapoco, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Texaco.Database.Petapoco.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Core\Audio.cs" />
+    <Compile Include="Core\AudioEnum.cs" />
+    <Compile Include="Core\DatabaseNames.cs" />
+    <Compile Include="Core\DefaultAudioService.cs" />
+    <Compile Include="Core\Gateway\BaseGatewayConnection.cs" />
+    <Compile Include="Core\Gateway\BaseGatewayService.cs" />
+    <Compile Include="Core\Gateway\DbConnection.cs" />
+    <Compile Include="Core\Gateway\DbService.cs" />
+    <Compile Include="Core\DelegateCommandBase.cs" />
+    <Compile Include="Core\DialogService.cs" />
+    <Compile Include="Core\Gateway\IGatewayConnection.cs" />
+    <Compile Include="Core\IAudioPlayer.cs" />
+    <Compile Include="Core\IAudioService.cs" />
+    <Compile Include="Core\ObjectPool.cs" />
+    <Compile Include="Core\Gateway\TcpConnection.cs" />
+    <Compile Include="Core\SoundPlayer.cs" />
+    <Compile Include="Core\StartupManager.cs" />
+    <Compile Include="Core\ViewLocator.cs" />
+    <Compile Include="Styles\ComboWithCheckboxes.xaml.cs">
+      <DependentUpon>ComboWithCheckboxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\Controls\ModernListBox.cs" />
+    <Compile Include="ViewModels\BaseBindableModel.cs" />
+    <Compile Include="ViewModels\Configuration\Client\AudioSettings.cs" />
+    <Compile Include="ViewModels\Contact\BaseContactModel.cs" />
+    <Compile Include="ViewModels\Contact\BaseContactViewModel.cs" />
+    <Compile Include="ViewModels\Contact\Contact.cs" />
+    <Compile Include="ViewModels\Contact\ContactSearchEngine.cs" />
+    <Compile Include="ViewModels\Contact\DatabaseCollectionViewSource.cs" />
+    <Compile Include="ViewModels\Contact\IContactCommand.cs" />
+    <Compile Include="ViewModels\Contact\LookupContactSource.cs" />
+    <Compile Include="ViewModels\Devices\Call\Answer.cs" />
+    <Compile Include="ViewModels\Devices\Call\CallView.cs" />
+    <Compile Include="ViewModels\Devices\Call\Dial.cs" />
+    <Compile Include="ViewModels\Devices\Call\Hangup.cs" />
+    <Compile Include="ViewModels\Devices\Call\SendUSSD.cs" />
+    <Compile Include="ViewModels\Devices\General\ActivityStatus.cs" />
+    <Compile Include="ViewModels\Devices\General\Functionality.cs" />
+    <Compile Include="ViewModels\Devices\General\GeneraView.cs" />
+    <Compile Include="ViewModels\Devices\General\HardwareVersion.cs" />
+    <Compile Include="ViewModels\Devices\General\IMSI.cs" />
+    <Compile Include="ViewModels\Devices\General\Manufacturer.cs" />
+    <Compile Include="ViewModels\Devices\General\ModelInformation.cs" />
+    <Compile Include="ViewModels\Devices\General\NetworkRegistration.cs" />
+    <Compile Include="ViewModels\Devices\General\Operator.cs" />
+    <Compile Include="ViewModels\Devices\General\ReportME.cs" />
+    <Compile Include="ViewModels\Devices\General\SerialNumber.cs" />
+    <Compile Include="ViewModels\Devices\General\ServiceCenter.cs" />
+    <Compile Include="ViewModels\Devices\General\SignalQuality.cs" />
+    <Compile Include="ViewModels\Devices\General\SoftwareVersion.cs" />
+    <Compile Include="ViewModels\Devices\General\TECharacter.cs" />
+    <Compile Include="ViewModels\Devices\Port\BasicInformation.cs" />
+    <Compile Include="ViewModels\Devices\Port\PortView.cs" />
+    <Compile Include="ViewModels\Devices\SMS\DeleteAllSMS.cs" />
+    <Compile Include="ViewModels\Devices\SMS\DeleteSMS.cs" />
+    <Compile Include="ViewModels\Devices\SMS\ReadSMS.cs" />
+    <Compile Include="ViewModels\Devices\SMS\SendSMS.cs" />
+    <Compile Include="ViewModels\Devices\SMS\SMSView.cs" />
+    <Compile Include="Core\IDialogService.cs" />
+    <Compile Include="ViewModels\ExtensionsIEnumerable.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\BaseMessageRow.cs" />
+    <Compile Include="ViewModels\Message\BaseMessageViewModel.cs" />
+    <Compile Include="ViewModels\Message\CommandParser.cs" />
+    <Compile Include="ViewModels\Contact\ComposeNewContactModel.cs" />
+    <Compile Include="ViewModels\Contact\ContactCollaborator.cs" />
+    <Compile Include="ViewModels\Contact\ContactMessageBar.cs" />
+    <Compile Include="ViewModels\Message\Comparer\BaseMessageComparer.cs" />
+    <Compile Include="ViewModels\Message\Comparer\OutboxComparer.cs" />
+    <Compile Include="ViewModels\Message\Comparer\SpamComparer.cs" />
+    <Compile Include="ViewModels\Message\Comparer\TrashComparer.cs" />
+    <Compile Include="ViewModels\Message\DraftCollectionViewSource.cs" />
+    <Compile Include="ViewModels\Message\IDataCollaborator.cs" />
+    <Compile Include="ViewModels\KeyValueOption.cs" />
+    <Compile Include="ViewModels\Message\Comparer\InboxComparer.cs" />
+    <Compile Include="ViewModels\Message\MessageCommandBar.cs" />
+    <Compile Include="ViewModels\Message\IMessageCommandBar.cs" />
+    <Compile Include="ViewModels\Message\IMessageCommand.cs" />
+    <Compile Include="ViewModels\Message\Inbox.cs" />
+    <Compile Include="ViewModels\Message\InboxCollectionViewSource.cs" />
+    <Compile Include="ViewModels\Message\MessageCollaborator.cs" />
+    <Compile Include="ViewModels\Message\BaseMessageModel.cs" />
+    <Compile Include="ViewModels\Message\MessageRead.cs" />
+    <Compile Include="ViewModels\Message\Queue.cs" />
+    <Compile Include="ViewModels\Message\BaseQueueCollectionSource.cs" />
+    <Compile Include="ViewModels\Message\QueueCollectionSource.cs" />
+    <Compile Include="ViewModels\Message\QueueWork.cs" />
+    <Compile Include="ViewModels\Message\WeeklyOptions.cs" />
+    <Compile Include="ViewModels\Message\MonthlyOptions.cs" />
+    <Compile Include="ViewModels\Message\Outbox.cs" />
+    <Compile Include="ViewModels\Message\ComposeMessageModel.cs" />
+    <Compile Include="ViewModels\Message\OutboxCollectionViewSource.cs" />
+    <Compile Include="ViewModels\MutableObservableCollection.cs" />
+    <Compile Include="ViewModels\ValidationRules\PassThroughConverter.cs" />
+    <Compile Include="ViewModels\Message\MessageSearchEngine.cs" />
+    <Compile Include="ViewModels\Message\Spam.cs" />
+    <Compile Include="ViewModels\Message\SpamCollectionViewSource.cs" />
+    <Compile Include="ViewModels\Message\Trash.cs" />
+    <Compile Include="ViewModels\Message\TrashCollectionViewSource.cs" />
+    <Compile Include="ViewModels\Message\TriggerOptions.cs" />
+    <Compile Include="ViewModels\PasswordHelper.cs" />
+    <Compile Include="Core\Gateway\GatewayManager.cs" />
+    <Compile Include="Core\Gateway\IGatewayManager.cs" />
+    <Compile Include="ViewModels\Configuration\Client\ApplicationSettings.cs" />
+    <Compile Include="ViewModels\Configuration\Client\ApplicationBindingCommands.cs" />
+    <Compile Include="ViewModels\Configuration\Client\DatabaseSettings.cs" />
+    <Compile Include="ViewModels\Configuration\Client\EncryptionSettings.cs" />
+    <Compile Include="ViewModels\Configuration\Client\GatewaySettings.cs" />
+    <Compile Include="ViewModels\Configuration\Client\GeneralSettings.cs" />
+    <Compile Include="ViewModels\Configuration\Server\GeneralSettings.cs" />
+    <Compile Include="ViewModels\Configuration\Server\PluginCollection.cs" />
+    <Compile Include="ViewModels\Configuration\Server\PluginElement.cs" />
+    <Compile Include="ViewModels\Configuration\Server\SerialPortElement.cs" />
+    <Compile Include="ViewModels\Configuration\Server\SerialPortCollection.cs" />
+    <Compile Include="ViewModels\Configuration\Server\ServerConfiguration.cs" />
+    <Compile Include="Core\ApplicationSettingKeySym.cs" />
+    <Compile Include="Core\ApplicationStartup.cs" />
+    <Compile Include="Core\Gateway\TcpService.cs" />
+    <Compile Include="Core\Gateway\IGatewayService.cs" />
+    <Compile Include="Core\IServiceLocator.cs" />
+    <Compile Include="Core\DelegateCommand.cs" />
+    <Compile Include="Core\BaseDataTemplate.cs" />
+    <Compile Include="Core\BaseSingleton.cs" />
+    <Compile Include="Navigation\DevicesMenuNavigation.cs" />
+    <Compile Include="Navigation\HomeNavigation.cs" />
+    <Compile Include="Navigation\MessagesMenuNavigation.cs" />
+    <Compile Include="ViewModels\ValidationRules\AllowableCharactersTextBoxBehavior.cs" />
+    <Compile Include="ViewModels\ValidationRules\BooleanConverter.cs" />
+    <Compile Include="ViewModels\ValidationRules\NotEmptyValidationRule.cs" />
+    <Compile Include="ViewModels\ValidationRules\CheckedConverter.cs" />
+    <Compile Include="Views\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Contacts.xaml.cs">
+      <DependentUpon>Contacts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\Devices.xaml.cs">
+      <DependentUpon>Devices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\Call.xaml.cs">
+      <DependentUpon>Call.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\Configuration.xaml.cs">
+      <DependentUpon>Configuration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\General.xaml.cs">
+      <DependentUpon>General.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\Phonebook.xaml.cs">
+      <DependentUpon>Phonebook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\Port.xaml.cs">
+      <DependentUpon>Port.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Device\SMS.xaml.cs">
+      <DependentUpon>SMS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\ComposeContact.xaml.cs">
+      <DependentUpon>ComposeContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\ComposeMessage.xaml.cs">
+      <DependentUpon>ComposeMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\LookupContact.xaml.cs">
+      <DependentUpon>LookupContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\Plugin.xaml.cs">
+      <DependentUpon>Plugin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\SerialPort.xaml.cs">
+      <DependentUpon>SerialPort.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Message\Draft.xaml.cs">
+      <DependentUpon>Draft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Message\Inbox.xaml.cs">
+      <DependentUpon>Inbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Message\Messages.xaml.cs">
+      <DependentUpon>Messages.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Message\Outbox.xaml.cs">
+      <DependentUpon>Outbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Message\Queue.xaml.cs">
+      <DependentUpon>Queue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Message\Spam.xaml.cs">
+      <DependentUpon>Spam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Message\Trash.xaml.cs">
+      <DependentUpon>Trash.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Global.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\CheckBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\BackButtonMetroStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\ComboWithCheckboxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\MetroListBoxStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\MetroListBoxItemStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\PasswordBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Device\Devices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Device\Call.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Device\Configuration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Device\General.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Device\Phonebook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Device\Port.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Device\SMS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\ComposeContact.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dialogs\ComposeMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\LookupContact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\Plugin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\SerialPort.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Message\Draft.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Message\Inbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Message\Messages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Message\Outbox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Message\Queue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Message\Spam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Message\Trash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="SqlFiles\DeleteQueue.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="audio\receive-message.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="audio\send-message.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="SqlFiles\UpdateMessageRead.sql" />
+    <Resource Include="Images\texto-icon.ico" />
+    <Resource Include="Images\gsm.png" />
+    <Content Include="libs\FirstFloor.ModernUI.dll" />
+    <Content Include="libs\GrayscaleEffect.dll" />
+    <Content Include="libs\Microsoft.Threading.Tasks.dll" />
+    <Content Include="libs\Newtonsoft.Json.dll" />
+    <Content Include="libs\System.Windows.Interactivity.dll" />
+    <Content Include="libs\Texaco.Container.dll" />
+    <Content Include="libs\Texaco.Database.dll" />
+    <Content Include="libs\Texaco.Database.Petapoco.dll" />
+    <Resource Include="texto-icon.ico" />
+    <EmbeddedResource Include="SqlFiles\UpdateContact.sql" />
+    <EmbeddedResource Include="SqlFiles\InsertContact.sql" />
+    <EmbeddedResource Include="SqlFiles\DeleteContact.sql" />
+    <EmbeddedResource Include="SqlFiles\GetContactAll.sql" />
+    <EmbeddedResource Include="SqlFiles\GetQueue.sql" />
+    <EmbeddedResource Include="SqlFiles\GetDailyTriggerByID.sql" />
+    <EmbeddedResource Include="SqlFiles\GetDraft.sql" />
+    <EmbeddedResource Include="SqlFiles\GetMonthlyTriggerByID.sql" />
+    <EmbeddedResource Include="SqlFiles\GetWeeklyTriggerByID.sql" />
+    <EmbeddedResource Include="SqlFiles\DeleteMessage.sql" />
+    <EmbeddedResource Include="SqlFiles\GetSpam.sql" />
+    <EmbeddedResource Include="SqlFiles\UpdateMessageStatus.sql" />
+    <EmbeddedResource Include="SqlFiles\GetTrash.sql" />
+    <EmbeddedResource Include="SqlFiles\GetOutbox.sql" />
+    <EmbeddedResource Include="SqlFiles\GetInbox.sql" />
+    <Resource Include="Images\texto.png" />
+    <Resource Include="Images\dark.new.message.png" />
+    <Resource Include="Images\dark.arrow.left.png" />
+    <Resource Include="Images\dark.contact.add.png" />
+    <Resource Include="Images\dark.delete.png" />
+    <Resource Include="Images\dark.folder.move.png" />
+    <Resource Include="Images\dark.reply.message.png" />
+    <Resource Include="Images\dark.add.below.png" />
+    <Content Include="libs\MahApps.Metro.dll" />
+    <Content Include="libs\MahApps.Metro.Resources.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GSMClient\GSMClient.csproj">
+      <Project>{51cad25a-7664-4a42-ba5c-b18da8c88385}</Project>
+      <Name>GSMClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

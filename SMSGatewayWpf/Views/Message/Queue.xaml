@@ -1,0 +1,97 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2015 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Message.Queue"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:converter="clr-namespace:SMSGatewayWpf.ViewModels.Message"
+            xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+            xmlns:vm="clr-namespace:SMSGatewayWpf.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="1000">
+
+    <Grid>
+        <DataGrid x:Name="QueueMessages" AutoGenerateColumns="False" CanUserAddRows="False"   
+                  GridLinesVisibility="Horizontal"
+                  EnableColumnVirtualization = "True"
+                  EnableRowVirtualization = "True"
+                  ItemsSource="{Binding Path=Source, UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding Path=MouseDoubleClickCommand}" CommandParameter="{Binding ElementName=QueueMessages, Path=SelectedItem}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete"
+                              Command="{Binding Path=DeleteCommand}" 
+                              CommandParameter="D"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn CanUserResize="False">
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Path=SelectAll, UpdateSourceTrigger=PropertyChanged}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Checked" >
+                                        <i:InvokeCommandAction Command="{Binding Path=DataContext.CheckedHeaderCommand,
+                                            RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding Path=DataContext.Source, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"/>
+                                    </i:EventTrigger>
+                                    <i:EventTrigger EventName="Unchecked" >
+                                        <i:InvokeCommandAction Command="{Binding Path=DataContext.CheckedHeaderCommand,
+                                            RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding Path=DataContext.Source, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Margin="9 0 0 0"   
+                                      IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}" >
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Checked" >
+                                        <i:InvokeCommandAction Command="{Binding Path=DataContext.CheckedRowCommand,
+                                            RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding Path=DataContext.Source, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"/>
+                                    </i:EventTrigger>
+                                    <i:EventTrigger EventName="Unchecked" >
+                                        <i:InvokeCommandAction Command="{Binding Path=DataContext.CheckedRowCommand,
+                                            RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding Path=DataContext.Source, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="SeqNbr" Width="120" IsReadOnly="True" Visibility="Hidden" Binding="{Binding SeqNbr}" />
+                <DataGridTextColumn Header="To" Width="120" IsReadOnly="True"  Binding="{Binding Phonenumber}" />
+                <DataGridTextColumn Header="Message" Width="500" IsReadOnly="True" Binding="{Binding Message}" /> 
+                <DataGridTemplateColumn Header="Created" Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} {1}">
+                                        <Binding Path="Date" />
+                                        <Binding Path="Time" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Next Executed" Width="120" IsReadOnly="True" Binding="{Binding NextExecuted}" />  
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

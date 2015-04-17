@@ -1,0 +1,3 @@
+﻿UPDATE dbo.QueueWorkItem
+SET RecursPoint = @RecursPoint
+WHERE SeqNbr = @SeqNbr

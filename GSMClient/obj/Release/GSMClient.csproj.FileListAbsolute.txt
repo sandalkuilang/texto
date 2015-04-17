@@ -1,0 +1,10 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMClient.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMClient.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMClient\obj\Release\GSMClient.csprojResolveAssemblyReference.cache
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMClient\obj\Release\GSMClient.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMClient\obj\Release\GSMClient.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMClient.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMClient.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMClient\obj\Release\GSMClient.csprojResolveAssemblyReference.cache
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMClient\obj\Release\GSMClient.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMClient\obj\Release\GSMClient.pdb

@@ -1,0 +1,15 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMCommunication.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMCommunication.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMCommunication\obj\Release\GSMCommunication.lang.en-US.resources
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMCommunication\obj\Release\GSMCommunication.lang.id-ID.resources
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMCommunication\obj\Release\GSMCommunication.csproj.GenerateResource.Cache
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMCommunication\obj\Release\GSMCommunication.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMCommunication\obj\Release\GSMCommunication.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMCommunication\obj\Release\GSMCommunication.csprojResolveAssemblyReference.cache
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMCommunication.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMCommunication.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.lang.en-US.resources
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.lang.id-ID.resources
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.csproj.GenerateResource.Cache
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.pdb

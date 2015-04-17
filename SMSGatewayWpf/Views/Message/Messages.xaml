@@ -1,0 +1,196 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Messages"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Views="clr-namespace:SMSGatewayWpf.Views.Message"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:ctrls="clr-namespace:SMSGatewayWpf.Styles.Controls"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI" 
+             xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="600">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml " />
+                <ResourceDictionary Source="../../Styles/ButtonStyle.xaml" />
+                <ResourceDictionary Source="../../Styles/MetroListBoxStyle.xaml" /> 
+            </ResourceDictionary.MergedDictionaries> 
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid VerticalAlignment="Stretch">
+        <Grid.LayoutTransform>
+            <ScaleTransform ScaleX="1" ScaleY="1" />
+        </Grid.LayoutTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+         
+        <Border Background="{DynamicResource HeaderMenu}" BorderThickness="0,1,0,1"  BorderBrush="{StaticResource BorderContent}">
+            <TextBox Margin="5,8,0,8"
+                Name="txtSearch"
+                VerticalAlignment="Stretch"
+                Width="188" 
+                HorizontalAlignment="Left"
+                Grid.Row="0" Grid.Column="0"
+                Text="{Binding Path=SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                Controls:TextBoxHelper.Watermark="Search"
+                Style="{DynamicResource SearchMetroTextBox}"
+                diag:PresentationTraceSources.TraceLevel="High">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="KeyUp">
+                        <i:InvokeCommandAction Command="{Binding Path=SearchCommand}" />
+                    </i:EventTrigger> 
+                </i:Interaction.Triggers>
+            </TextBox>
+        </Border>
+
+        <Border Grid.Row="0" Grid.Column="1"  
+            Background="{DynamicResource HeaderMenu}" 
+            BorderThickness="0,1,0,1"  
+            BorderBrush="{StaticResource BorderContent}">
+            <Grid Margin="10 0 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <!-- Command here -->
+                    <Button x:Name="ComposeMessage" Margin="0 5 10 5" BorderThickness="0" Width="100" 
+                        Height="40" Background="Transparent" Foreground="#D15948" 
+                        diag:PresentationTraceSources.TraceLevel="High">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="../../Images/dark.new.message.png"/>
+                            <TextBlock FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontWeight="Normal">Compose</TextBlock>
+                        </StackPanel>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding Path=ShowComposeDialog.ComposeCommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                    <Button Margin="0 5 15 5" BorderThickness="0" Width="80" Height="40" Background="Transparent" Foreground="#D15948" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="../../Images/dark.delete.png"/>
+                            <TextBlock FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontWeight="Normal">Delete</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="0 5 10 5" BorderThickness="0" Width="80" Height="40" Background="Transparent" Foreground="#D15948" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="../../Images/dark.folder.move.png"/>
+                            <TextBlock FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontWeight="Normal">Move</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                Background="Transparent" BorderThickness="0,0,1,0" 
+                BorderBrush="{StaticResource BorderContent}">
+            <Grid> 
+                <Controls:MetroAnimatedSingleRowTabControl Grid.Column="0"> 
+                    <TabItem> 
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="inbox" FontSize="18"/>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
+                        <TabItem.ContentTemplate>
+                            <DataTemplate>
+                                <Views:Inbox DataContext="{Binding Path=InboxSource}" />
+                            </DataTemplate> 
+                        </TabItem.ContentTemplate>
+                    </TabItem>
+                    <TabItem>
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="outbox" FontSize="18" />
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
+                        <TabItem.ContentTemplate>
+                            <DataTemplate>
+                                <Views:Outbox DataContext="{Binding Path=OutboxSource}" />
+                            </DataTemplate>
+                        </TabItem.ContentTemplate>
+                    </TabItem>
+                    <TabItem>
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="draft" FontSize="18" />
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
+                        <TabItem.ContentTemplate>
+                            <DataTemplate>
+                                <Views:Draft DataContext="{Binding Path=DraftSource}" />
+                            </DataTemplate>
+                        </TabItem.ContentTemplate>
+                    </TabItem>
+                    <TabItem>
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="spam" FontSize="18" />
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
+                        <TabItem.ContentTemplate>
+                            <DataTemplate>
+                                <Views:Spam DataContext="{Binding Path=SpamSource}" />
+                            </DataTemplate>
+                        </TabItem.ContentTemplate> 
+                    </TabItem>
+                    <TabItem Header="trash">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="trash" FontSize="18" />
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
+                        <TabItem.ContentTemplate>
+                            <DataTemplate>
+                                <Views:Trash DataContext="{Binding Path=TrashSource}" />
+                            </DataTemplate>
+                        </TabItem.ContentTemplate> 
+                    </TabItem>
+                    <TabItem Header="queue">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="queue" FontSize="18" />
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
+                        <TabItem.ContentTemplate>
+                            <DataTemplate>
+                                <Views:Queue DataContext="{Binding Path=QueueSource}" />
+                            </DataTemplate>
+                        </TabItem.ContentTemplate> 
+                    </TabItem>
+                </Controls:MetroAnimatedSingleRowTabControl>
+                <!--<ctrls:ModernListBox x:Name="messagesPanel"  SelectedSource="../../Views/Message/Inbox.xaml" Layout="Tab" ListWidth="192" VerticalAlignment="Stretch">
+                    <ctrls:ModernListBox.Links >
+                        <mui:Link DisplayName="Inbox" Source="../../Views/Message/Inbox.xaml"  />
+                        <mui:Link DisplayName="Outbox" Source="../../Views/Message/Outbox.xaml" />
+                        <mui:Link DisplayName="Draft" Source="../../Views/Message/Draft.xaml" />
+                        <mui:Link DisplayName="Spam" Source="../../Views/Message/Spam.xaml"/>
+                        <mui:Link DisplayName="Trash" Source="../../Views/Message/Trash.xaml"/>
+                        <mui:Link DisplayName="Queue" Source="../../Views/Message/Queue.xaml"/>
+                    </ctrls:ModernListBox.Links>
+                </ctrls:ModernListBox>-->
+            </Grid>
+            
+             
+        </Border>
+ 
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,9 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Debug\SMSTest.exe.config
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Debug\SMSTest.exe
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Debug\SMSTest.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Debug\Cryptography.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Debug\GSMClient.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Debug\GSMServerModel.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\bin\Debug\Newtonsoft.Json.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\obj\Debug\SMSTest.exe
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\SMSTest\SMSTest\obj\Debug\SMSTest.pdb

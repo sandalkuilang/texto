@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <StartupObject />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F7C2541-57BF-4842-BCFC-F708C5AF3F3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GSMServer</RootNamespace>
+    <AssemblyName>GSMServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binary\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.0.6.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Texaco.Container, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\Texaco.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Texaco.Database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\Texaco.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Texaco.Database.Petapoco, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>resources\Texaco.Database.Petapoco.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionInvokerLookup.cs" />
+    <Compile Include="AttributeSearcher.cs" />
+    <Compile Include="Configuration\ApplicationSettings.cs" />
+    <Compile Include="Configuration\GeneralSettings.cs" />
+    <Compile Include="Configuration\IConfiguration.cs" />
+    <Compile Include="Configuration\PluginElement.cs" />
+    <Compile Include="Configuration\PluginCollection.cs" />
+    <Compile Include="Configuration\PluginSettings.cs" />
+    <Compile Include="Configuration\SerialPortCollection.cs" />
+    <Compile Include="Configuration\SerialPort.cs" />
+    <Compile Include="Configuration\SerialPortSettings.cs" />
+    <Compile Include="Contracts\BasicInformation.cs" />
+    <Compile Include="Contracts\ConfigAttribute.cs" />
+    <Compile Include="Contracts\ActionServerAttribute.cs" />
+    <Compile Include="Contracts\IConfiguration.cs" />
+    <Compile Include="Contracts\InternalLogging\BaseInternalLogging.cs" />
+    <Compile Include="Contracts\InternalLogging\BaseRandomizeGenerator.cs" />
+    <Compile Include="Contracts\InternalLogging\ConsoleErrorLogging.cs" />
+    <Compile Include="Contracts\IGeneral.cs" />
+    <Compile Include="Contracts\InternalLogging\GUID.cs" />
+    <Compile Include="Contracts\InternalLogging\IErrorLogging.cs" />
+    <Compile Include="Contracts\InternalLogging\IInternalLogging.cs" />
+    <Compile Include="Contracts\InternalLogging\ISMSLogging.cs" />
+    <Compile Include="Contracts\InternalLogging\ArchiveSMSLogging.cs" />
+    <Compile Include="Contracts\IServer.cs" />
+    <Compile Include="ObjectPool.cs" />
+    <Compile Include="Security\UnauthorizedMethod.cs" />
+    <Compile Include="Worker\CommandParser.cs" />
+    <Compile Include="Worker\DatabaseWorkerPool.cs" />
+    <Compile Include="MultithreadedSingleton.cs" />
+    <Compile Include="RandomConnectionProvider.cs" />
+    <Compile Include="Contracts\ContractAttribute.cs" />
+    <Compile Include="Plugin\IPlugin.cs" />
+    <Compile Include="Plugin\PluginActivator.cs" />
+    <Compile Include="Plugin\PluginMap.cs" />
+    <Compile Include="Plugin\Plugin.cs" />
+    <Compile Include="Contracts\CallAttribute.cs" />
+    <Compile Include="Contracts\PhoneBookAttribute.cs" />
+    <Compile Include="Contracts\SMSAttribute.cs" />
+    <Compile Include="Contracts\ICall.cs" />
+    <Compile Include="Contracts\IPhoneBook.cs" />
+    <Compile Include="Contracts\ISMS.cs" />
+    <Compile Include="Contracts\ParameterizedMap.cs" />
+    <Compile Include="Contracts\UnboxParameterizedMap.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Security\AuthorizationRequestFilterAttribute.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="IQueue.cs" />
+    <Compile Include="Plugin\PluginObserver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeConstant.cs" />
+    <Compile Include="Worker\ICommandParser.cs" />
+    <Compile Include="Worker\MemoryWorkerPool.cs" />
+    <Compile Include="ConnectionProvider.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Worker\BasePipeline.cs" />
+    <Compile Include="Worker\IPipeline.cs" />
+    <Compile Include="Worker\DefaultPipeline.cs" />
+    <Compile Include="Worker\Trigger\DailyTrigger.cs" />
+    <Compile Include="Worker\Trigger\MonthlyTrigger.cs" />
+    <Compile Include="Worker\Trigger\WeeklyTrigger.cs" />
+    <Compile Include="Worker\Trigger\QueueWorkItem.cs" />
+    <Compile Include="Worker\WorkerPoolManager.cs" />
+    <Compile Include="Worker\WorkItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cryptography\Cryptography.csproj">
+      <Project>{65e5603c-5d04-4b3e-a5c5-52c36f5f0cc8}</Project>
+      <Name>Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSMCommunication\GSMCommunication.csproj">
+      <Project>{0b3e74cc-1cfe-4d9b-929d-4bf39ce2afd1}</Project>
+      <Name>GSMCommunication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSMServerModel\GSMServerModel.csproj">
+      <Project>{01D47884-04CD-4886-9239-B0C5E665C46C}</Project>
+      <Name>GSMServerModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sockets\Sockets.csproj">
+      <Project>{da1a7c3f-da47-4e2f-9cf1-6df501433452}</Project>
+      <Name>Sockets</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\Newtonsoft.Json.dll" />
+    <Content Include="resources\Texaco.Container.dll" />
+    <Content Include="resources\Texaco.Database.dll" />
+    <Content Include="resources\Texaco.Database.Petapoco.dll" />
+    <EmbeddedResource Include="SqlFiles\UpdateQueueRecursPoint.txt" />
+    <EmbeddedResource Include="SqlFiles\InsertSMSOutbox.txt" />
+    <EmbeddedResource Include="SqlFiles\InsertSMSInbox.txt" />
+    <EmbeddedResource Include="SqlFiles\InsertResultWorkItem.txt" />
+    <EmbeddedResource Include="SqlFiles\UpdateQueueNextExecuted.txt" />
+    <EmbeddedResource Include="SqlFiles\DeleteQueueWorkItem.txt" />
+    <EmbeddedResource Include="SqlFiles\DeleteDailyTriggerByID.txt" />
+    <EmbeddedResource Include="SqlFiles\DeleteMonthlyTriggerByID.txt" />
+    <EmbeddedResource Include="SqlFiles\DeleteWeeklyTriggerByID.txt" />
+    <EmbeddedResource Include="SqlFiles\UpdateQueueLastExecuted.txt" />
+    <EmbeddedResource Include="SqlFiles\GetDailyTriggerByID.txt" />
+    <EmbeddedResource Include="SqlFiles\GetMonthlyTriggerByID.txt" />
+    <EmbeddedResource Include="SqlFiles\GetWeeklyTriggerByID.txt" />
+    <EmbeddedResource Include="SqlFiles\CountQueueWorkItem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlFiles\GetAllQueueWorkItem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlFiles\GetQueueWorkItem.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

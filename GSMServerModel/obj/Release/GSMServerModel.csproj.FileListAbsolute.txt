@@ -1,0 +1,9 @@
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMServerModel.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\Binary\GSMServerModel.pdb
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMServerModel\obj\Release\GSMServerModel.dll
+E:\Documents\git.toyota.co.id\TDK-Application\SMSGateway\Source\GSMServerModel\obj\Release\GSMServerModel.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMServerModel.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMServerModel.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServerModel\obj\Release\GSMServerModel.dll
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServerModel\obj\Release\GSMServerModel.pdb
+D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServerModel\obj\Release\GSMServerModel.csprojResolveAssemblyReference.cache

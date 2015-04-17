@@ -1,0 +1,21 @@
+Q: Can i call someone using SMS Gateway?
+A: Yes, you can
+	1. see, Sending SMS.txt file.
+	2. the difference is on command string, see Command String.txt
+	3. the code will look like this
+	 
+		example:
+
+		string ip = ConfigurationManager.AppSettings["SMSGatewayIP"];
+		int port = ConfigurationManager.AppSettings["SMSGatewayPort"];
+	
+		/// Send SMS format
+		string dialCallFormat = "ICall.Dial(+param: number={0})";
+	
+		/// initiate a new object of Client
+		GSMClient.IClient client;
+		client = new GSMClient.Client(ip, port); 
+		client.Open();
+		client.Send(String.Format(dialCallFormat, "081234567"));
+		client.Close();
+	 

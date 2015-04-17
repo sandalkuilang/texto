@@ -1,0 +1,292 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Device.Call"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:rules="clr-namespace:SMSGatewayWpf.ViewModels.ValidationRules"   
+             xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+          d:DesignHeight="1024" d:DesignWidth="600">
+
+    <Border Background="Transparent" BorderThickness="0,1,0,0"  BorderBrush="{StaticResource BorderContent}">
+        <ScrollViewer Margin="10 0 0 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!--Unstructured Supplementary Service Data-->
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Unstructured Supplementary Service Data"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="90"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Send and receive USSD strings e.g *888# or *233*947199934050#" />
+                                <Label Grid.Row="1" Foreground="#838383" Content="A sequence entered is sent to the network which replies with an alphanumerical string, for display only, or for display plus request for the next sequence." />
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" Margin="0 10 0 5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/> 
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Grid.Row="0" Content="USSD Code" />
+                            <TextBox Grid.Column="1" Grid.Row="0" 
+                                     Height="25" Width="250" 
+                                     HorizontalAlignment="Left"
+                                     Text="{Binding Path=SendUSSD.USSD, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+  
+
+                            <Grid Grid.Row="3" Grid.Column="1" >
+                                <Button x:Name="SendUSSD"
+                                        Style="{DynamicResource SquareButtonStyle}"  
+                                        Content="Invoke"
+                                        FontSize="16"  
+                                        Width="80" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Left"
+                                        Command="{Binding Path=SendUSSD.SendUSSDCommand}"
+                                        IsEnabled="{Binding Path=SendUSSD.IsEnabled}"/>
+
+                                <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=SendUSSD.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="100,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <Border Grid.Row="2" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 TextWrapping="Wrap"
+                                 Text="{Binding Path=SendUSSD.Response}"/>
+                    </Border>
+                </Grid>
+
+                <!--Dial-->
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Dial"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="90"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Used to set a voice, data or fax call." /> 
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" Margin="0 10 0 5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Grid.Row="0" Content="Phone number" />
+                            <TextBox Grid.Column="1" Grid.Row="0" Height="25" Width="150" HorizontalAlignment="Left"
+                                     Text="{Binding Path=Dial.PhoneNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
+                                <interactivity:Interaction.Behaviors>
+                                    <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="20" />
+                                </interactivity:Interaction.Behaviors>
+                            </TextBox>
+
+                            <Grid Grid.Row="3" Grid.Column="1" >
+                                <Button x:Name="Dial"
+                                        Style="{DynamicResource SquareButtonStyle}"  
+                                        Content="Invoke"
+                                        FontSize="16"  
+                                        Width="80" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Left"
+                                        Command="{Binding Path=Dial.DialCommand}"
+                                        IsEnabled="{Binding Path=Dial.IsEnabled}"/>
+
+                                <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=Dial.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="100,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <Border Grid.Row="2" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 TextWrapping="Wrap" Text="{Binding Path=Dial.Response}"/>
+                    </Border>
+                </Grid>
+
+                <!--Answer-->
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Answer a Call"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="When the product receives a call, it sets the RingInd signal and " />
+                                <Label Grid.Row="1" Foreground="#838383" Content="sends the ASCII (RING) string to the application Then it waits for the application to accept the call with the ATA command." />
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" >
+                            <Button x:Name="Answer"
+                                        Style="{DynamicResource SquareButtonStyle}"  
+                                        Content="Invoke"
+                                        FontSize="16"  
+                                        Width="80" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Left"
+                                        Command="{Binding Path=Answer.AnswerCommand}"
+                                        IsEnabled="{Binding Path=Answer.IsEnabled}"/>
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=Answer.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="100,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+
+                    <Border Grid.Row="2" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 TextWrapping="Wrap" Text="{Binding Path=Answer.Response}"/>
+                    </Border>
+                </Grid>
+
+                <!--Hang-->
+                <Grid Grid.Row="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Hang-Up"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Used by the application to disconnect the remote user. In the case of multiple calls, all calls are released. (active, on-hold and waiting calls)." />
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" >
+                            <Button x:Name="Hangup"
+                                        Style="{DynamicResource SquareButtonStyle}"  
+                                        Content="Invoke"
+                                        FontSize="16"  
+                                        Width="80" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Left"
+                                        Command="{Binding Path=Hangup.HangupCommand}"
+                                        IsEnabled="{Binding Path=Hangup.IsEnabled}"/>
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=Hangup.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="100,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+
+                    <Border Grid.Row="2" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 TextWrapping="Wrap" Text="{Binding Path=Hangup.Response}"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+
+</UserControl>

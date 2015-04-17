@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GSMCommunication.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LangDefault" Type="System.String" Scope="User">
+      <Value Profile="(Default)">id-ID</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

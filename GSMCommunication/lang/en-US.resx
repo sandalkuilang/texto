@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CMS_ERROR_1" xml:space="preserve">
+    <value>Unassigned number</value>
+  </data>
+  <data name="CMS_ERROR_10" xml:space="preserve">
+    <value>Call bared</value>
+  </data>
+  <data name="CMS_ERROR_111" xml:space="preserve">
+    <value>Protocol error, unspecified</value>
+  </data>
+  <data name="CMS_ERROR_127" xml:space="preserve">
+    <value>Internetworking , unspecified</value>
+  </data>
+  <data name="CMS_ERROR_128" xml:space="preserve">
+    <value>Telematic internetworking not supported</value>
+  </data>
+  <data name="CMS_ERROR_129" xml:space="preserve">
+    <value>Short message type 0 not supported</value>
+  </data>
+  <data name="CMS_ERROR_130" xml:space="preserve">
+    <value>Cannot replace short message</value>
+  </data>
+  <data name="CMS_ERROR_143" xml:space="preserve">
+    <value>Unspecified TP-PID error</value>
+  </data>
+  <data name="CMS_ERROR_144" xml:space="preserve">
+    <value>Data code scheme not supported</value>
+  </data>
+  <data name="CMS_ERROR_145" xml:space="preserve">
+    <value>Message class not supported</value>
+  </data>
+  <data name="CMS_ERROR_159" xml:space="preserve">
+    <value>Unspecified TP-DCS error</value>
+  </data>
+  <data name="CMS_ERROR_160" xml:space="preserve">
+    <value>Command cannot be actioned</value>
+  </data>
+  <data name="CMS_ERROR_161" xml:space="preserve">
+    <value>Command unsupported</value>
+  </data>
+  <data name="CMS_ERROR_175" xml:space="preserve">
+    <value>Unspecified TP-Command error</value>
+  </data>
+  <data name="CMS_ERROR_176" xml:space="preserve">
+    <value>TPDU not supported</value>
+  </data>
+  <data name="CMS_ERROR_192" xml:space="preserve">
+    <value>SC busy</value>
+  </data>
+  <data name="CMS_ERROR_193" xml:space="preserve">
+    <value>No SC subscription</value>
+  </data>
+  <data name="CMS_ERROR_194" xml:space="preserve">
+    <value>SC System failure</value>
+  </data>
+  <data name="CMS_ERROR_195" xml:space="preserve">
+    <value>Invalid SME address</value>
+  </data>
+  <data name="CMS_ERROR_196" xml:space="preserve">
+    <value>Destination SME barred</value>
+  </data>
+  <data name="CMS_ERROR_197" xml:space="preserve">
+    <value>SM Rejected-Duplicate SM</value>
+  </data>
+  <data name="CMS_ERROR_198" xml:space="preserve">
+    <value>TP-VPF not supported</value>
+  </data>
+  <data name="CMS_ERROR_199" xml:space="preserve">
+    <value>TP-VP not supported</value>
+  </data>
+  <data name="CMS_ERROR_208" xml:space="preserve">
+    <value>D0 SIM SMS Storage full</value>
+  </data>
+  <data name="CMS_ERROR_209" xml:space="preserve">
+    <value>No SMS Storage capability in SIM</value>
+  </data>
+  <data name="CMS_ERROR_21" xml:space="preserve">
+    <value>Short message transfer rejected</value>
+  </data>
+  <data name="CMS_ERROR_210" xml:space="preserve">
+    <value>Error in MS</value>
+  </data>
+  <data name="CMS_ERROR_211" xml:space="preserve">
+    <value>Memory capacity exceeded</value>
+  </data>
+  <data name="CMS_ERROR_212" xml:space="preserve">
+    <value>Sim application toolkit busy</value>
+  </data>
+  <data name="CMS_ERROR_213" xml:space="preserve">
+    <value>SIM data download error</value>
+  </data>
+  <data name="CMS_ERROR_255" xml:space="preserve">
+    <value>Unspecified error cause</value>
+  </data>
+  <data name="CMS_ERROR_27" xml:space="preserve">
+    <value>Destination out of service</value>
+  </data>
+  <data name="CMS_ERROR_28" xml:space="preserve">
+    <value>Unindentified subscriber</value>
+  </data>
+  <data name="CMS_ERROR_29" xml:space="preserve">
+    <value>Facility rejected</value>
+  </data>
+  <data name="CMS_ERROR_30" xml:space="preserve">
+    <value>Unknown subscriber</value>
+  </data>
+  <data name="CMS_ERROR_300" xml:space="preserve">
+    <value>ME Failure</value>
+  </data>
+  <data name="CMS_ERROR_301" xml:space="preserve">
+    <value>SMS service of ME reserved</value>
+  </data>
+  <data name="CMS_ERROR_302" xml:space="preserve">
+    <value>Operation not allowed</value>
+  </data>
+  <data name="CMS_ERROR_303" xml:space="preserve">
+    <value>Operation not supported</value>
+  </data>
+  <data name="CMS_ERROR_304" xml:space="preserve">
+    <value>Invalid PDU mode parameter</value>
+  </data>
+  <data name="CMS_ERROR_305" xml:space="preserve">
+    <value>Invalid Text mode parameter</value>
+  </data>
+  <data name="CMS_ERROR_310" xml:space="preserve">
+    <value>SIM not inserted</value>
+  </data>
+  <data name="CMS_ERROR_311" xml:space="preserve">
+    <value>SIM PIN required</value>
+  </data>
+  <data name="CMS_ERROR_312" xml:space="preserve">
+    <value>PH-SIM PIN required</value>
+  </data>
+  <data name="CMS_ERROR_313" xml:space="preserve">
+    <value>SIM failure</value>
+  </data>
+  <data name="CMS_ERROR_314" xml:space="preserve">
+    <value>SIM busy</value>
+  </data>
+  <data name="CMS_ERROR_315" xml:space="preserve">
+    <value>SIM wrong</value>
+  </data>
+  <data name="CMS_ERROR_316" xml:space="preserve">
+    <value>SIM PUK required</value>
+  </data>
+  <data name="CMS_ERROR_317" xml:space="preserve">
+    <value>SIM PIN2 required</value>
+  </data>
+  <data name="CMS_ERROR_318" xml:space="preserve">
+    <value>SIM PUK2 required</value>
+  </data>
+  <data name="CMS_ERROR_320" xml:space="preserve">
+    <value>Memory failure</value>
+  </data>
+  <data name="CMS_ERROR_321" xml:space="preserve">
+    <value>Invalid memory index</value>
+  </data>
+  <data name="CMS_ERROR_322" xml:space="preserve">
+    <value>Memory full</value>
+  </data>
+  <data name="CMS_ERROR_330" xml:space="preserve">
+    <value>SMSC address unknown</value>
+  </data>
+  <data name="CMS_ERROR_331" xml:space="preserve">
+    <value>No network service</value>
+  </data>
+  <data name="CMS_ERROR_332" xml:space="preserve">
+    <value>Network timeout</value>
+  </data>
+  <data name="CMS_ERROR_340" xml:space="preserve">
+    <value>No +CNMA expected</value>
+  </data>
+  <data name="CMS_ERROR_38" xml:space="preserve">
+    <value>Network out of order</value>
+  </data>
+  <data name="CMS_ERROR_41" xml:space="preserve">
+    <value>Temporary failure</value>
+  </data>
+  <data name="CMS_ERROR_42" xml:space="preserve">
+    <value>Congestion</value>
+  </data>
+  <data name="CMS_ERROR_47" xml:space="preserve">
+    <value>Recources unavailable</value>
+  </data>
+  <data name="CMS_ERROR_50" xml:space="preserve">
+    <value>Requested facility not subscribed</value>
+  </data>
+  <data name="CMS_ERROR_500" xml:space="preserve">
+    <value>Unknown error (The phone number you try to send your message to is invalid/ There is no network coverage or not enough money on a prepaid subscription/ The short message service center of the GSM network operator is temporarily out of service/ The GSM cell is overloaded)</value>
+  </data>
+  <data name="CMS_ERROR_512" xml:space="preserve">
+    <value>User abort</value>
+  </data>
+  <data name="CMS_ERROR_513" xml:space="preserve">
+    <value>Unable to store</value>
+  </data>
+  <data name="CMS_ERROR_514" xml:space="preserve">
+    <value>Invalid Status</value>
+  </data>
+  <data name="CMS_ERROR_515" xml:space="preserve">
+    <value>Device busy or Invalid Character in string</value>
+  </data>
+  <data name="CMS_ERROR_516" xml:space="preserve">
+    <value>Invalid length</value>
+  </data>
+  <data name="CMS_ERROR_517" xml:space="preserve">
+    <value>Invalid character in PDU</value>
+  </data>
+  <data name="CMS_ERROR_518" xml:space="preserve">
+    <value>Invalid parameter</value>
+  </data>
+  <data name="CMS_ERROR_519" xml:space="preserve">
+    <value>Invalid length or character</value>
+  </data>
+  <data name="CMS_ERROR_520" xml:space="preserve">
+    <value>Invalid character in text</value>
+  </data>
+  <data name="CMS_ERROR_521" xml:space="preserve">
+    <value>Timer expired</value>
+  </data>
+  <data name="CMS_ERROR_522" xml:space="preserve">
+    <value>Operation temporary not allowed</value>
+  </data>
+  <data name="CMS_ERROR_532" xml:space="preserve">
+    <value>SIM not ready</value>
+  </data>
+  <data name="CMS_ERROR_534" xml:space="preserve">
+    <value>Cell Broadcast error unknown</value>
+  </data>
+  <data name="CMS_ERROR_535" xml:space="preserve">
+    <value>Protocol stack busy</value>
+  </data>
+  <data name="CMS_ERROR_538" xml:space="preserve">
+    <value>Invalid parameter</value>
+  </data>
+  <data name="CMS_ERROR_69" xml:space="preserve">
+    <value>Requested facility not implemented</value>
+  </data>
+  <data name="CMS_ERROR_8" xml:space="preserve">
+    <value>Operator determined barring</value>
+  </data>
+  <data name="CMS_ERROR_81" xml:space="preserve">
+    <value>Invalid short message transfer reference value</value>
+  </data>
+  <data name="CMS_ERROR_95" xml:space="preserve">
+    <value>Invalid message unspecified</value>
+  </data>
+  <data name="CMS_ERROR_96" xml:space="preserve">
+    <value>Invalid mandatory information</value>
+  </data>
+  <data name="CMS_ERROR_97" xml:space="preserve">
+    <value>Message type non existent or not implemented</value>
+  </data>
+  <data name="CMS_ERROR_98" xml:space="preserve">
+    <value>Message not compatible with short message protocol</value>
+  </data>
+  <data name="CMS_ERROR_99" xml:space="preserve">
+    <value>Information element non-existent or not implemente</value>
+  </data>
+</root>

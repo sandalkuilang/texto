@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B3E74CC-1CFE-4D9B-929D-4BF39CE2AFD1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GSMCommunication</RootNamespace>
+    <AssemblyName>GSMCommunication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binary\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ATController.cs" />
+    <Compile Include="BaseConnector.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="Feature\ErrorMessageFormat.cs" />
+    <Compile Include="Feature\FunctionalityLevel.cs" />
+    <Compile Include="Feature\PhoneActivityStatus.cs" />
+    <Compile Include="Feature\MemoryStorage.cs" />
+    <Compile Include="Feature\RegistrationStatus.cs" />
+    <Compile Include="Feature\Result.cs" />
+    <Compile Include="Feature\SMSStatus.cs" />
+    <Compile Include="Feature\StringResult.cs" />
+    <Compile Include="Feature\USSDCodePresent.cs" />
+    <Compile Include="Feature\USSDResult.cs" />
+    <Compile Include="Feature\GenericTypeResult.cs" />
+    <Compile Include="PDUDecoder\PduParts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PDUDecoder\SmartMessaging\ConcatInfoComparer.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\ConcatMessageElement16.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\ConcatMessageElement8.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\IConcatenationInfo.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\InformationElement.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\OtaBitmap.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\PortAddressElement16.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\SmartMessageDecoder.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\SmartMessageFactory.cs" />
+    <Compile Include="PDUDecoder\SmartMessaging\UnknownInformationElement.cs" />
+    <Compile Include="SerialPortFixer.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="ControlChars.cs" />
+    <Compile Include="Feature\BasicInformation.cs" />
+    <Compile Include="Feature\BaseResult.cs" />
+    <Compile Include="Feature\Call.cs" />
+    <Compile Include="Feature\PhoneBook.cs" />
+    <Compile Include="Feature\PhoneBookInfo.cs" />
+    <Compile Include="Feature\PhoneNumberInfo.cs" />
+    <Compile Include="Feature\SMS.cs" />
+    <Compile Include="Feature\SMSReadResult.cs" />
+    <Compile Include="Feature\SMSSendResult.cs" />
+    <EmbeddedResource Include="lang\en-US.Designer.cs" />
+    <EmbeddedResource Include="lang\id-ID.Designer.cs" />
+    <Compile Include="MEErrorManager.cs" />
+    <Compile Include="PDUDecoder\AddressType.cs" />
+    <Compile Include="PDUDecoder\BcdWorker.cs" />
+    <Compile Include="PDUDecoder\Calc.cs" />
+    <Compile Include="PDUDecoder\DataCodingScheme.cs" />
+    <Compile Include="PDUDecoder\GeneralDataCoding.cs" />
+    <Compile Include="PDUDecoder\IncomingMessageFlags.cs" />
+    <Compile Include="PDUDecoder\IncomingMessageType.cs" />
+    <Compile Include="PDUDecoder\IncomingSmsPdu.cs" />
+    <Compile Include="PDUDecoder\ITimestamp.cs" />
+    <Compile Include="PDUDecoder\KnownMessageStatus.cs" />
+    <Compile Include="PDUDecoder\MessageCoding.cs" />
+    <Compile Include="PDUDecoder\MessageStatus.cs" />
+    <Compile Include="PDUDecoder\MessageWaitingDiscard.cs" />
+    <Compile Include="PDUDecoder\MessageWaitingIndication.cs" />
+    <Compile Include="PDUDecoder\MessageWaitingStore.cs" />
+    <Compile Include="PDUDecoder\MessageWaitingStoreUcs2.cs" />
+    <Compile Include="PDUDecoder\OutgoingMessageFlags.cs" />
+    <Compile Include="PDUDecoder\OutgoingMessageType.cs" />
+    <Compile Include="PDUDecoder\OutgoingSmsPdu.cs" />
+    <Compile Include="PDUDecoder\ParameterIndicator.cs" />
+    <Compile Include="PDUDecoder\RelativeValidityPeriod.cs" />
+    <Compile Include="PDUDecoder\ReservedCodingGroup.cs" />
+    <Compile Include="PDUDecoder\SmsDeliverMessageFlags.cs" />
+    <Compile Include="PDUDecoder\SmsDeliverPdu.cs" />
+    <Compile Include="PDUDecoder\SmsPdu.cs" />
+    <Compile Include="PDUDecoder\SmsStatusReportMessageFlags.cs" />
+    <Compile Include="PDUDecoder\SmsStatusReportPdu.cs" />
+    <Compile Include="PDUDecoder\SmsSubmitMessageFlags.cs" />
+    <Compile Include="PDUDecoder\SmsSubmitPdu.cs" />
+    <Compile Include="PDUDecoder\SmsTimestamp.cs" />
+    <Compile Include="PDUDecoder\StatusCategory.cs" />
+    <Compile Include="PDUDecoder\TextDataConverter.cs" />
+    <Compile Include="PDUDecoder\ValidityPeriod.cs" />
+    <Compile Include="PDUDecoder\ValidityPeriodFormat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="lang\en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lang\id-ID.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

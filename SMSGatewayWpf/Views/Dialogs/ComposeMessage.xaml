@@ -1,0 +1,292 @@
+﻿<Controls:MetroWindow x:Class="SMSGatewayWpf.Views.Dialogs.ComposeMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:message="clr-namespace:SMSGatewayWpf.ViewModels.Message"
+        xmlns:rules="clr-namespace:SMSGatewayWpf.ViewModels.ValidationRules"   
+        xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:styles="clr-namespace:SMSGatewayWpf.Styles"
+        WindowStartupLocation="CenterScreen"  
+        ShowMaxRestoreButton="False"
+        ShowMinButton="False"
+        ResizeMode="NoResize"  
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        Title="New message" Height="650" Width="550">
+
+    <Control.Resources>
+        <ResourceDictionary>
+            <rules:CheckedConverter x:Key="RadioButtonCheckedConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Styles/ButtonStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro.Resources;component/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Control.Resources>
+
+    <Grid RenderOptions.ClearTypeHint="Enabled" TextOptions.TextFormattingMode="Display"
+          VerticalAlignment="Stretch">
+        <Border BorderBrush="LightBlue" BorderThickness="1" Margin="0,0,0,0" VerticalAlignment="Stretch" Height="Auto">
+            <Controls:TransitioningContentControl Width="Auto" x:Name="transitionComposeMessage"
+                Transition="Left" Margin="9,-1,-9,1">
+                <Grid Margin="20,20,0,0" >
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="0 0 0 10" />
+                        </Style>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="Margin" Value="0 0 0 10" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="Phone number"/>
+
+                    <TextBox  
+                        Text="{Binding Path=Phonenumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                        Width="300"  
+                        Height="25"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Grid.Row="0" Grid.Column="1"
+                        Controls:TextBoxHelper.Watermark="Enter phone number"
+                        Controls:TextBoxHelper.ButtonCommand="{Binding LookupContact, Mode=OneWay}"
+                        Style="{DynamicResource SearchMetroTextBox}">
+                        <interactivity:Interaction.Behaviors>
+                            <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9;]+$" MaxLength="870" />
+                        </interactivity:Interaction.Behaviors>
+                    </TextBox>
+
+                    <Label Grid.Row="1" Grid.Column="0" Content="Message" />
+                    <TextBox Name="txtMessage" Grid.Row="1" Grid.Column="1"
+                             Height="100" AcceptsReturn="True" Padding="3"
+                             Text="{Binding Path=Message, UpdateSourceTrigger=PropertyChanged}"
+                             HorizontalAlignment="Stretch" Margin="0,0,40,15"
+                             Controls:TextBoxHelper.Watermark="Enter your message" />
+
+                    <Label Grid.Row="2" Grid.Column="0" Content="Time" />
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" >
+                        <DatePicker Width="130" Height="25"
+                                Text="{Binding Path=Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Grid.Row="2" Grid.Column="1" 
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
+                                Controls:TextBoxHelper.Watermark="Select a date" />
+                        <Label Grid.Row="2" Grid.Column="1" Margin="15 0 0 0" Content="hour" />
+                        <TextBox Name="txtTimeDate" Padding="3"
+                                MaxLength="5"
+                                Text="{Binding Path=Time, UpdateSourceTrigger=PropertyChanged}"
+                                Margin="10, 0, 0, 10" 
+                                Width="50"
+                                Controls:TextBoxHelper.IsSpellCheckContextMenuEnabled="True">
+                            <interactivity:Interaction.Behaviors>
+                                <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9:]+$" MaxLength="5" />
+                            </interactivity:Interaction.Behaviors>
+                        </TextBox>
+                    </StackPanel>
+
+                    <Label Grid.Row="3" Grid.Column="0" Content="Settings" />
+                    <Grid Grid.Column="1" Grid.Row="3">
+                        <Grid.Resources>
+                            <Style TargetType="{x:Type RadioButton}">
+                                <Setter Property="Margin" Value="0 0 0 10" />
+                            </Style>
+                        </Grid.Resources>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" x:Name="pnlOneTime">
+                            <RadioButton x:Name="rdoOneTime" GroupName="Trigger" Grid.Row="0" Grid.Column="0" 
+                                     Content="One Time" IsChecked="{Binding TriggerOptions, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter={x:Static message:TriggerOptions.OneTime}}" />
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Grid.Column="0" x:Name="pnlDaily">
+                            <RadioButton x:Name="rdoDaily" GroupName="Trigger" Content="Daily"
+                                          IsChecked="{Binding TriggerOptions, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter={x:Static message:TriggerOptions.Daily}}"/>
+
+                            <Grid Margin="15 0 0 0">
+                                <Grid.RowDefinitions />
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Content="every" Width="40" HorizontalAlignment="Left" />
+                                <TextBox Grid.Column="1" Width="35" Padding="3" MaxLength="3" HorizontalAlignment="Right"
+                                         IsEnabled="{Binding ElementName=rdoDaily, Path=IsChecked}"
+                                         Text="{Binding RecursDay}">
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="3" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                                <Label Grid.Column="2" Content="days" HorizontalAlignment="Left" />
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="2" Grid.Column="0">
+                            <RadioButton x:Name="rdoWeekly" GroupName="Trigger" Content="Weekly"
+                                          IsChecked="{Binding TriggerOptions, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter={x:Static message:TriggerOptions.Weekly}}"/>
+                            <Grid Margin="15 0 0 0">
+                                <Grid.Resources>
+                                    <Style TargetType="{x:Type StackPanel}">
+                                        <Setter Property="Height" Value="25" />
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions >
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="45"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Content="every" Width="40" HorizontalAlignment="Left" />
+                                <TextBox Grid.Column="1" Width="35" Padding="3" MaxLength="3" HorizontalAlignment="Left"
+                                         IsEnabled="{Binding ElementName=rdoWeekly, Path=IsChecked}"
+                                         Text="{Binding RecursWeek}">
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="2" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                                <Label Grid.Column="2" Content="weeks on" HorizontalAlignment="Left" />
+
+                                <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                                            IsEnabled="{Binding ElementName=rdoWeekly, Path=IsChecked}"
+                                            Orientation="Horizontal">
+                                    <StackPanel.Resources>
+                                        <Style TargetType="{x:Type CheckBox}">
+                                            <Setter Property="Width" Value="90" />
+                                            <Setter Property="Height" Value="20" />
+                                        </Style>
+                                    </StackPanel.Resources>
+
+                                    <CheckBox Content="Sunday" IsThreeState="False"
+                                              IsChecked="{Binding WeeklyOptions.Sunday, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <CheckBox Content="Monday" IsThreeState="False"
+                                              IsChecked="{Binding WeeklyOptions.Monday, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <CheckBox Content="Tuesday" IsThreeState="False"
+                                              IsChecked="{Binding WeeklyOptions.Tuesday, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <CheckBox Content="Wednesday" IsThreeState="False"
+                                              IsChecked="{Binding WeeklyOptions.Wednesday, UpdateSourceTrigger=PropertyChanged}"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"
+                                            IsEnabled="{Binding ElementName=rdoWeekly, Path=IsChecked}"
+                                            Orientation="Horizontal">
+                                    <StackPanel.Resources>
+                                        <Style TargetType="{x:Type CheckBox}">
+                                            <Setter Property="Width" Value="90" />
+                                            <Setter Property="Height" Value="20" />
+                                        </Style>
+                                    </StackPanel.Resources>
+
+                                    <CheckBox Content="Thursday"  IsThreeState="False"
+                                              IsChecked="{Binding WeeklyOptions.Thursday, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <CheckBox Content="Friday" IsThreeState="False"
+                                              IsChecked="{Binding WeeklyOptions.Friday, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <CheckBox Content="Saturday" IsThreeState="False"
+                                              IsChecked="{Binding WeeklyOptions.Saturday, UpdateSourceTrigger=PropertyChanged}"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="3" Grid.Column="0" Margin="0 15 0 0">
+                            <RadioButton x:Name="rdoMonthly" GroupName="Trigger" Content="Monthly"
+                                          IsChecked="{Binding TriggerOptions, Converter={StaticResource RadioButtonCheckedConverter}, ConverterParameter={x:Static message:TriggerOptions.Monthly}}"/>
+                            <Grid Margin="15 0 0 0">
+                                <Grid.Resources>
+                                    <Style TargetType="{x:Type ComboBox}">
+                                        <Setter Property="VerticalAlignment" Value="Top" />
+                                        <Setter Property="HorizontalAlignment" Value="Left" />
+                                        <Setter Property="Height" Value="25" />
+                                        <Setter Property="Width" Value="180" />
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="Months" />
+                                <styles:ComboWithCheckboxes Grid.Row="0" Grid.Column="1" Height="Auto" 
+                                                            ItemsSource="{Binding Months}" IsEnabled="{Binding ElementName=rdoMonthly, Path=IsChecked}"
+                                                            HorizontalAlignment="Left" DefaultText="Select month" Margin="0,4,0,5" Width="180" />
+                                
+                                <Label Grid.Row="1" Grid.Column="0" Content="Days" />
+                                <styles:ComboWithCheckboxes Grid.Row="1" Grid.Column="1" Height="Auto" 
+                                                            ItemsSource="{Binding Days}" IsEnabled="{Binding ElementName=rdoMonthly, Path=IsChecked}"
+                                                            HorizontalAlignment="Left" DefaultText="Select days" Margin="0,0,0,6" Width="180" />
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+
+                    <CheckBox x:Name="chkEnabled" Grid.Row="4" Grid.Column="0" 
+                              IsThreeState="False" Content="Enabled" 
+                              IsChecked="{Binding Enabled}"
+                              ToolTip="Disabled means message will be save as draft."/>
+
+                    <!--<Grid Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="btnCancel" Content="Cancel" 
+                                Grid.Column="0" Background="#FAFAFA" Foreground="#D15948"
+                                Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto"  
+                                Click="btnCancel_Click"/>
+                        
+                        <Button x:Name="btnOK" Content="OK" 
+                                Click="btnOK_Click" Grid.Column="1"
+                                Command="{Binding SaveCommand}" Background="#FAFAFA" Foreground="#D15948"
+                                CommandParameter="{Binding}"
+                                Margin="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto"  
+                                />
+                    </Grid>-->
+                    <StackPanel Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" 
+                                Orientation="Horizontal" Margin="0 30 0 0">
+                        <Button x:Name="btnOK" Content="OK" 
+                                Click="btnOK_Click"
+                                Command="{Binding SaveCommand}"
+                                CommandParameter="{Binding}"
+                                Width="150"  Margin="0 0 15 0"
+                                />
+                        <Button x:Name="btnCancel" Content="Cancel" Width="150"  
+                                Click="btnCancel_Click"/> 
+
+                        <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="20,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </Controls:TransitioningContentControl>
+        </Border>
+    </Grid>
+</Controls:MetroWindow>

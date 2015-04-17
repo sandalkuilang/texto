@@ -1,0 +1,84 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Views="clr-namespace:SMSGatewayWpf.Views" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        x:Class="SMSGatewayWpf.MainWindow" 
+        xmlns:Model="clr-namespace:SMSGatewayWpf.ViewModels"
+        Icon="texto-icon.ico"
+        Title="TEXTO"  
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" 
+        ResizeMode="CanResizeWithGrip"
+        Closing="MetroWindow_Closing"
+        mc:Ignorable="d"
+        d:DesignHeight="640"
+        d:DesignWidth="800"
+        d:DataContext="{d:DesignInstance Model:MainWindowViewModel}"  >
+
+        <!--Icon="texto.ico"
+        Title="TEXTO" 
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        ShowIconOnTitleBar="True"
+        ShowTitleBar="True"
+        Closing="MetroWindow_Closing"
+        mc:Ignorable="d"
+        d:DesignHeight="640"
+        d:DesignWidth="800"
+        d:DataContext="{d:DesignInstance Model:MainWindowViewModel}"
+        TitlebarHeight="38"-->
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="Home">
+                <Views:Home DataContext="{Binding}"></Views:Home>
+            </DataTemplate>
+            <DataTemplate x:Key="About">
+                <Views:About DataContext="{Binding}"></Views:About>
+            </DataTemplate>
+            <DataTemplate x:Key="Settings">
+                <Views:Settings DataContext="{Binding}"></Views:Settings>
+            </DataTemplate>
+        </ResourceDictionary> 
+    </Window.Resources>
+    
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands x:Name="commands">
+            <Button Name="btnSettings" Content="Settings" Click="btnSettings_Click"/>
+            <Button Name="btnAbout" Content="About" Click="btnAbout_Click" />
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <!--<mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="Settings" Source="/Views/Settings.xaml" />
+        <mui:Link DisplayName="About" Source="/Views/About.xaml" />
+    </mui:ModernWindow.TitleLinks>-->
+
+    <Controls:MetroContentControl>
+        <Grid VerticalAlignment="Stretch">
+            <Border BorderBrush="LightBlue" BorderThickness="1" Margin="0,0,0,0" VerticalAlignment="Stretch" Height="Auto">
+                <Controls:TransitioningContentControl Width="Auto" x:Name="transitionContentHome"
+                    Transition="Left" Content="{Binding Body}"> 
+                </Controls:TransitioningContentControl> 
+            </Border>
+        </Grid>
+    </Controls:MetroContentControl>
+
+    <!--<mui:ModernWindow.MenuLinkGroups> 
+        <mui:LinkGroup DisplayName="Home">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Message" Source="/Views/Message/Messages.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup> 
+         
+    </mui:ModernWindow.MenuLinkGroups>-->
+    
+</Controls:MetroWindow>

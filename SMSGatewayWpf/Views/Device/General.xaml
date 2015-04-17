@@ -1,0 +1,846 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Device.General"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="2604" d:DesignWidth="600">
+     
+    <Border Background="Transparent" BorderThickness="0,1,0,0"  BorderBrush="{StaticResource BorderContent}">
+        <ScrollViewer Margin="0 0 0 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!--Hardware Version--> 
+                <Grid Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                            Content="Hardware Version"
+                            FontFamily="Normal"
+                            FontSize="16"
+                            TextBlock.TextAlignment="Left"
+                            HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="50"/> 
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Get the hardware version" />
+                            </Grid>
+                        </Border>
+                        
+                        <Grid Grid.Row="1" Margin="0 0 0 0" >
+                            <Button  
+                                    IsEnabled="{Binding Path=HardwareVersion.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{DynamicResource SquareButtonStyle}"  
+                                    Content="Invoke"
+                                    Command="{Binding HardwareVersion.HardwareVersionCommand}" 
+                                    FontSize="16"  
+                                    Width="80" 
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=HardwareVersion.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="100,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=HardwareVersion.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid> 
+
+                <!--Serial Number--> 
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                            Content="Serial Number"
+                            FontFamily="Normal"
+                            FontSize="16"
+                            TextBlock.TextAlignment="Left"
+                            HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/> 
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Get the serial number of the wireless CPU." />
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1" >
+                            <Button  
+                                    IsEnabled="{Binding Path=SerialNumber.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{DynamicResource SquareButtonStyle}"  
+                                    Content="Invoke"
+                                    Command="{Binding SerialNumber.SerialNumberCommand}" 
+                                    FontSize="16"  
+                                    Width="80" 
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=SerialNumber.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="100,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=SerialNumber.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid> 
+
+                <!--Manufacturer-->
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Manufacturer"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/>
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Return the manufacturer identification." />
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1" >
+                            <Button  
+                                    IsEnabled="{Binding Path=Manufacturer.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{DynamicResource SquareButtonStyle}"  
+                                    Content="Invoke"
+                                    Command="{Binding Manufacturer.ManufacturerCommand}" 
+                                    FontSize="16"  
+                                    Width="80" 
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                                   IsActive="{Binding Path=Manufacturer.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                   Margin="100,0,0,0" 
+                                                   HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=Manufacturer.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+
+                <!--Operator--> 
+                <Grid Grid.Row="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0"
+                                Content="Operator"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                        </Label>
+
+                        <Grid Grid.Row="1" Margin="10 0 0 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="55"/> 
+                            </Grid.RowDefinitions>
+                            <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                                <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/> 
+                                    </Grid.RowDefinitions>
+                                    <Label Foreground="#838383" Content="Returns the selected operator." />
+                                </Grid>
+                            </Border>
+                            <Grid Grid.Row="1" >
+                                <Button  
+                                        IsEnabled="{Binding Path=Operator.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                        Style="{DynamicResource SquareButtonStyle}"  
+                                        Content="Invoke"
+                                        Command="{Binding Operator.OperatorCommand}" 
+                                        FontSize="16"  
+                                        Width="80" 
+                                        VerticalAlignment="Center"  
+                                        HorizontalAlignment="Left" />
+
+                                <Controls:ProgressRing Width="25" Height="25" 
+                                                       IsActive="{Binding Path=Operator.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                       Margin="100,0,0,0" 
+                                                       HorizontalAlignment="Left"/>
+                            </Grid>
+                    </Grid>
+                        <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                     Text="{Binding Path=Operator.Response}" TextWrapping="Wrap"/>
+                        </Border>
+                    </Grid> 
+
+                <!--International Mobile Subscriber Identity--> 
+                <Grid Grid.Row="4" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                            Content="International Mobile Subscriber Identity"
+                            FontFamily="Normal"
+                            FontSize="16"
+                            TextBlock.TextAlignment="Left"
+                            HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/> 
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Identify the IMSI (International Mobile Subscriber Identity) of the SIM card." />
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1" >
+                            <Button  
+                                        IsEnabled="{Binding Path=IMSI.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                        Style="{DynamicResource SquareButtonStyle}"  
+                                        Content="Invoke"
+                                        Command="{Binding IMSI.IMSICommand}" 
+                                        FontSize="16"  
+                                        Width="80" 
+                                        VerticalAlignment="Center"  
+                                        HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                                       IsActive="{Binding Path=IMSI.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                                       Margin="100,0,0,0" 
+                                                       HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=IMSI.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid> 
+
+                <!--Model Identification-->
+                <Grid Grid.Row="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Model Information"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="55"/> 
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="55">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Get the supported frequency bands." />
+                                <Label Grid.Row="1" Foreground="#838383" Content="With multi-band products the response may be a combination of different bands." />
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1" >
+                            <Button  
+                                IsEnabled="{Binding Path=ModelInformation.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                Style="{DynamicResource SquareButtonStyle}"  
+                                Content="Invoke"
+                                Command="{Binding ModelInformation.ModelInformationCommand}" 
+                                FontSize="16"  
+                                Width="80" 
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                IsActive="{Binding Path=ModelInformation.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="100,0,0,0" 
+                                HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=ModelInformation.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+
+                <!--Software Version--> 
+                <Grid Grid.Row="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                            Content="Software Version"
+                            FontFamily="Normal"
+                            FontSize="16"
+                            TextBlock.TextAlignment="Left"
+                            HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/> 
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Displays some internal software reference." />
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1" >
+                            <Button  
+                                IsEnabled="{Binding Path=SoftwareVersion.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                Style="{DynamicResource SquareButtonStyle}"  
+                                Content="Invoke"
+                                Command="{Binding SoftwareVersion.SoftwareVersionCommand}" 
+                                FontSize="16"  
+                                Width="80" 
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                IsActive="{Binding Path=SoftwareVersion.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="100,0,0,0" 
+                                HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=SoftwareVersion.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid> 
+
+                <!--Service Center-->
+                <Grid Grid.Row="7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Service Center"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Indicate to which service center the message must be sent." />
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1" >
+                            <Button  
+                                IsEnabled="{Binding Path=ServiceCenter.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                Style="{DynamicResource SquareButtonStyle}"  
+                                Content="Invoke"
+                                Command="{Binding ServiceCenter.ServiceCenterCommand}" 
+                                FontSize="16"  
+                                Width="80" 
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                IsActive="{Binding Path=ServiceCenter.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="100,0,0,0" 
+                                HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=ServiceCenter.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+
+                <!--Activity Status-->
+                <Grid Grid.Row="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Activity Status"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/> 
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="50">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Returns the activity status of the mobile equipment." />
+                            </Grid>
+                        </Border>
+                        <Grid Grid.Row="1" >
+                            <Button  
+                                IsEnabled="{Binding Path=ActivityStatus.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                Style="{DynamicResource SquareButtonStyle}"  
+                                Content="Invoke"
+                                Command="{Binding ActivityStatus.ActivityStatusCommand}" 
+                                FontSize="16"  
+                                Width="80" 
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                IsActive="{Binding Path=ActivityStatus.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="100,0,0,0" 
+                                HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=ActivityStatus.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+
+                <!--Report Mobile Equipment errors-->
+                <Grid Grid.Row="9">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Report Mobile Equipment errors"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="90"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="55">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Disables or enables the use of the +CME ERROR: xxx or CMS ERROR: xxx" />
+                                <Label Grid.Row="1" Foreground="#838383" Content="result code instead of simply ERROR." />
+                            </Grid>
+                        </Border>
+                        
+                        <Grid Grid.Row="1" Margin="0 10 0 5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="150" />
+                            </Grid.ColumnDefinitions>
+                            
+                            <Label Grid.Column="0" Grid.Row="0" Content="Value" />
+                            <TextBox Grid.Column="1" Grid.Row="0" Height="25" Width="100" HorizontalAlignment="Left" 
+                                     Text="{Binding Path=ReportME.Value, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                            <Grid Grid.Row="1" Grid.Column="1" >
+                                <Button  
+                                    IsEnabled="{Binding Path=ReportME.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{DynamicResource SquareButtonStyle}"  
+                                    Content="Invoke"
+                                    Command="{Binding ReportME.ReportMECommand}" 
+                                    FontSize="16"  
+                                    Width="80" 
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Left" />
+
+                                <Controls:ProgressRing Width="25" Height="25" 
+                                    IsActive="{Binding Path=ReportME.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                    Margin="100,0,0,0" 
+                                    HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=ReportME.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+ 
+                <!--Character Set-->
+                <Grid Grid.Row="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="TE Character"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="90"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="80">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="informs the ME which character set is used by the TE. The ME can convert each character" />
+                                <Label Grid.Row="1" Foreground="#838383" Content="of entered or displayed strings. This is used to send, read or write short messages." />
+                                <Label Grid.Row="2" Foreground="#838383" Content="The possible values is (GSM, PCCP437, CUSTOM, HEX)." />
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" Margin="0 10 0 5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="160" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Grid.Row="0" Content="Value" />
+                            <TextBox Grid.Column="1" Grid.Row="0" Height="25" Width="100" HorizontalAlignment="Left"
+                                     Text="{Binding Path=TECharacter.Value, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"/>
+
+                            <Grid Grid.Row="1" Grid.Column="1" >
+                                <Button  
+                                    IsEnabled="{Binding Path=TECharacter.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{DynamicResource SquareButtonStyle}"  
+                                    Content="Invoke"
+                                    Command="{Binding TECharacter.TECharacterCommand}" 
+                                    FontSize="16"  
+                                    Width="80" 
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Left" />
+
+                                <Controls:ProgressRing Width="25" Height="25" 
+                                    IsActive="{Binding Path=TECharacter.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                    Margin="100,0,0,0" 
+                                    HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <Border  Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=TECharacter.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+
+                <!--Signal Quality-->
+                <Grid Grid.Row="11">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Signal Quality"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="55">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="This command is used to ascertain the received signal strength indication" />
+                                <Label Grid.Row="1" Foreground="#838383" Content="and the channel bit error rate with or without a SIM card." /> 
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" Grid.Column="1" Margin="0 0 0 0" >
+                            <Button   
+                                    IsEnabled="{Binding Path=SignalQuality.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{DynamicResource SquareButtonStyle}"  
+                                    Content="Invoke"
+                                    Command="{Binding SignalQuality.SignalQualityCommand}" 
+                                    FontSize="16"  
+                                    Width="80" 
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                    IsActive="{Binding Path=SignalQuality.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                    Margin="100,0,0,0" 
+                                    HorizontalAlignment="Left"/>
+                        </Grid> 
+                    </Grid>
+
+                    <Border Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=SignalQuality.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+
+                <!--Network Registration-->
+                <Grid Grid.Row="12">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Network Registration"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="55"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/> 
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="Used by the application to ascertain the registration status." /> 
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" Grid.Column="1" >
+                            <Button  
+                                IsEnabled="{Binding Path=NetworkRegistration.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                Style="{DynamicResource SquareButtonStyle}"  
+                                Content="Invoke"
+                                Command="{Binding NetworkRegistration.NetworkRegistrationCommand}" 
+                                FontSize="16"  
+                                Width="80" 
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Left" />
+
+                            <Controls:ProgressRing Width="25" Height="25" 
+                                IsActive="{Binding Path=NetworkRegistration.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                Margin="100,0,0,0" 
+                                HorizontalAlignment="Left"/>
+                        </Grid>
+                    </Grid>
+
+                    <Border Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=NetworkRegistration.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+
+                <!--Functionality-->
+                <Grid Grid.Row="13">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0"
+                                Content="Functionality"
+                                FontFamily="Normal"
+                                FontSize="16"
+                                TextBlock.TextAlignment="Left"
+                                HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    </Label>
+
+                    <Grid Grid.Row="1" Margin="10 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="90"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        
+                        <Border BorderBrush="#c8c7cc" Grid.Row="0"  BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Label Foreground="#838383" Content="the mobile station's level of functionality." />
+                                <Label Grid.Row="1" Foreground="#838383" Content="0: Set minimum functionality, IMSI detach procedure" />
+                                <Label Grid.Row="2" Foreground="#838383" Content="1: Set the full functionality mode with a complete software reset" />
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="1" Margin="0 10 0 5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="150" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Grid.Row="0" Content="Value" />
+                            <TextBox Grid.Column="1" Grid.Row="0" Height="25" Width="100" HorizontalAlignment="Left"
+                                     Text="{Binding Path=Functionality.Value, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+
+                            <Grid Grid.Row="1" Grid.Column="1" >
+                                <Button  
+                                    IsEnabled="{Binding Path=Functionality.IsEnabled, UpdateSourceTrigger=PropertyChanged}"
+                                    Style="{DynamicResource SquareButtonStyle}"  
+                                    Content="Invoke"
+                                    Command="{Binding Functionality.FunctionalityCommand}" 
+                                    FontSize="16"  
+                                    Width="80" 
+                                    VerticalAlignment="Center"  
+                                    HorizontalAlignment="Left" />
+
+                                <Controls:ProgressRing Width="25" Height="25" 
+                                    IsActive="{Binding Path=Functionality.IsBusy, UpdateSourceTrigger=PropertyChanged}" 
+                                    Margin="100,0,0,0" 
+                                    HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <Border Grid.Row="3" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                        <TextBox BorderThickness="0" IsReadOnly="True" HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=Functionality.Response}" TextWrapping="Wrap"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+
+</UserControl>

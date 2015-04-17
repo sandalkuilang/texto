@@ -1,0 +1,40 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:Views="clr-namespace:SMSGatewayWpf.Views" 
+             xmlns:ctrls="clr-namespace:SMSGatewayWpf.ViewModels" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="791" d:DesignHeight="638"
+             d:DataContext="{d:DesignInstance ctrls:MainWindowViewModel}">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml " />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <!--Controls:MetroAnimatedSingleRowTabControl-->
+        <Controls:MetroAnimatedSingleRowTabControl Margin="0,0,0,0">
+            <TabItem Header="messages" >
+                <Views:Messages/>
+            </TabItem>
+            <TabItem Header="contacts">
+                <Views:Contacts/>
+            </TabItem>
+            <TabItem Header="devices">
+                <Views:Devices/>
+            </TabItem>
+        </Controls:MetroAnimatedSingleRowTabControl>
+    </Grid>
+    
+</UserControl>

@@ -1,0 +1,3 @@
+﻿UPDATE dbo.QueueWorkItem
+SET NextExecuted = @NextExecuted
+WHERE SeqNbr = @SeqNbr

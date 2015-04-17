@@ -1,0 +1,20 @@
+
+INSERT INTO dbo.Outbox
+        ( Sender ,
+          SeqNbr ,
+          Receiver ,
+          Message ,
+          Time ,
+          SenderOperator , 
+          NetworkStatus,
+		  Error
+        )
+VALUES  ( @Sender , -- Sender - varchar(30)
+          @Sequence , -- SeqNbr - int
+          @Receiver , -- Receiver - varchar(30)
+          @Message , -- Message - varchar(2000)
+          @Time , -- Time - datetime
+		  @SenderOperator , -- SenderOperator - varchar(30) 
+          @NetworkStatus ,  -- NetworkStatus - varchar(50)
+		  @Error
+        )

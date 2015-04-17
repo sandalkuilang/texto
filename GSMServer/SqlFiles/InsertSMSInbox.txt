@@ -1,0 +1,8 @@
+INSERT  INTO dbo.Inbox
+SELECT  @Sender , -- Sender - varchar(30)
+		@Sequence, -- sequence - int
+        @Message , -- Sessage - varchar(2000)
+        @Time , -- Time - datetime
+        @ReceiverOperator  , -- ReceiverOperator - varchar(30)
+		@IsRead
+        

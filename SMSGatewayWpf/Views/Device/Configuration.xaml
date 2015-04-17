@@ -1,0 +1,422 @@
+﻿<!--
+    SMS Gateway desktop client
+ 
+    Copyright (C) 2014 Yudha - yudha_hyp@yahoo.com
+-->
+<UserControl x:Class="SMSGatewayWpf.Views.Device.Configuration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:rules="clr-namespace:SMSGatewayWpf.ViewModels.ValidationRules"   
+             xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="1224" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Styles/TextBoxStyle.xaml" />
+                <ResourceDictionary Source="../../Styles/ButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border RenderOptions.ClearTypeHint="Enabled" TextOptions.TextFormattingMode="Display" Background="Transparent" BorderThickness="0,1,0,0"  BorderBrush="{StaticResource BorderContent}">
+        <ScrollViewer Margin="10 0 0 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+
+                <!--General section-->
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" 
+                       Content="General" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0" 
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" >
+                    </Label>
+                    <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Top">
+                        <!--Default port-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="Default Port" />
+                                <TextBox 
+                                    Name="txtDefaultPort" 
+                                    Padding="2"
+                                    Grid.Column="1" 
+                                    Height="25" 
+                                    Width="120" 
+                                    FontSize="12"
+                                    Text="{Binding Path=General.DefaultPort}"> 
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]" MaxLength="10" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The port used by client to connect the server" />
+                        </Grid>
+
+                        <!--Default IP-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="Default IP" />
+                                <TextBox 
+                                    Name="txtDefaultIP" 
+                                    Padding="2" 
+                                    Grid.Column="1" 
+                                    Height="25" 
+                                    Width="120" 
+                                    FontSize="12"
+                                    Text="{Binding Path=General.DefaultIP}"> 
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9.]+$" MaxLength="15" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="55">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The IP Address used by client to connect the server" />
+                            <Label Grid.Row="1" Foreground="#838383" Content=" if the PC is connected to the network it will have 2 IP Address, 127.0.0.1 (localhost) and the IP address of network" />
+                        </Grid>
+
+                        <!--Default Encoding-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="Default Encoding" />
+                                <ComboBox Grid.Column="1" 
+                                          Width="120" 
+                                          HorizontalAlignment="Left" 
+                                          Height="25" 
+                                          ItemsSource="{StaticResource EncodingNames}"
+                                          SelectedValue="{Binding Path=General.DefaultEncoding}"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The Encoding used to convert string" />
+                        </Grid>
+
+                        <!--Country Code-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="Country Code" />
+                                <TextBox Name="txtCountryCode" 
+                                         Padding="2" 
+                                         Grid.Column="1" 
+                                         Height="25" 
+                                         Width="45" 
+                                         FontSize="12"
+                                         Text="{Binding Path=General.CountryCode}"> 
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="2" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The Country code of your Network Telecommunication" />
+                        </Grid>
+
+                        <!--SMS Signature-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="SMS Signature" />
+                                <TextBox Name="txtSMSSignature" 
+                                         Padding="2" 
+                                         Grid.Column="1" 
+                                         Height="25" 
+                                         Width="120" 
+                                         FontSize="12"
+                                         Text="{Binding Path=General.SMSGWSignature}"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The signature used by the server for every incoming request to indicates the sender request if valid, you can use unique string." />
+                        </Grid>
+
+                        <!--Preffix own number-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="Prefix Own Number" />
+                                <TextBox Name="txtPreffixOwnNumber" 
+                                         Padding="2" 
+                                         Grid.Column="1" 
+                                         Height="25" 
+                                         Width="120" 
+                                         FontSize="12"
+                                         Text="{Binding Path=General.PrefixOwnNumber}"/>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The phonebook name used by the server to check own number" />
+                        </Grid>
+
+                        <!--Interval Worker Queue-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="Interval Worker Queue" />
+                                <TextBox Name="txtIntervalWorkerQueue" 
+                                         Padding="2" 
+                                         Grid.Column="1" 
+                                         Height="25" 
+                                         Width="60" 
+                                         FontSize="12"
+                                         Text="{Binding Path=General.IntervalWorkerQueue}"> 
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="10" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The Interval used by server to check queue of request, the best minimum value is 1500 (in millisecond)" />
+                        </Grid>
+
+                        <!--IntervalReadMessage-->
+                        <Border BorderBrush="#c8c7cc" BorderThickness="0 1 0 1">
+                            <Grid Margin="0 0 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="220"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Center" Content="Interval Read Message" />
+                                <TextBox Name="txtIntervalReadMessage" 
+                                         Padding="2" 
+                                         Grid.Column="1"
+                                         Height="25" 
+                                         Width="60" 
+                                         FontSize="12"
+                                         Text="{Binding Path=General.IntervalReadMessage}">
+                                    <interactivity:Interaction.Behaviors>
+                                        <rules:AllowableCharactersTextBoxBehavior RegularExpression="^[0-9]+$" MaxLength="10" />
+                                    </interactivity:Interaction.Behaviors>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+                        <Grid Margin="0 0 0 0" Background="#efeff4" Grid.ColumnSpan="2" Height="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Label Foreground="#838383" Content="The Interval used by server to read incoming message, the best minimum value is 3500 (in millisecond)" />
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                <!--Serial port section-->
+                <Border Grid.Row="1" BorderBrush="#c8c7cc" BorderThickness="0 1 0 1" Visibility="Hidden">
+                    <Grid Margin="0 0 0 10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="40" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0" 
+                       Content="Serial Port" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0" 
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" />
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal">
+                            <Button x:Name="AddSerialPort" Margin="5 0 10 0" BorderThickness="0" Width="70" Height="40" Background="Transparent" Click="AddSerialPort_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="35" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="../../Images/dark.add.below.png"/>
+                                    <TextBlock FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontWeight="Normal">Add</TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="DeleteSerialPort" Margin="5 0 10 0" BorderThickness="0" Width="80" Height="40" Background="Transparent" Click="DeleteSerialPort_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="35" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="../../Images/dark.delete.png"/>
+                                    <TextBlock FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontWeight="Normal">Delete</TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <Border Grid.Row="2" Background="Transparent" BorderThickness="1,1,1,1" Margin="5 0 0 0" BorderBrush="{StaticResource BorderContent}">
+                            <DataGrid Name="gridSerialPort" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding Path=SerialPorts.SerialPort}">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn CanUserResize="False">
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <CheckBox IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox Margin="9 0 0 0" IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="COM Port" IsReadOnly="True" Binding="{Binding PortName}" />
+                                    <DataGridTextColumn Header="Baud Rate" IsReadOnly="True" Binding="{Binding BaudRate}" />
+                                    <DataGridTextColumn Header="Parity" IsReadOnly="True" Binding="{Binding Parity}" />
+                                    <DataGridTextColumn Header="Data Bits" IsReadOnly="True" Binding="{Binding DataBits}"/>
+                                    <DataGridTextColumn Header="Stop Bits" IsReadOnly="True" Binding="{Binding StopBits}"/>
+                                    <DataGridTextColumn Header="Handshake" IsReadOnly="True" Binding="{Binding Handshake}"/>
+                                    <DataGridTextColumn Header="Service Center" IsReadOnly="True" Binding="{Binding ServiceCenter}"/>
+                                    <DataGridTextColumn Header="PDU Mode" IsReadOnly="True" Binding="{Binding PDUMode}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <!--Plugin section-->
+                <Border Grid.Row="2" BorderBrush="#c8c7cc" BorderThickness="0 0 0 1" Visibility="Hidden">
+                    <Grid Margin="0 0 0 10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="40" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0" 
+                       Content="Plugin" 
+                       FontWeight="Normal" 
+                       FontSize="20" 
+                       Margin="-5,0,0,0" 
+                       TextBlock.TextAlignment="Left" 
+                       HorizontalAlignment="Left" />
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal">
+                            <Button x:Name="AddPlugin" Margin="5 0 10 0" BorderThickness="0" Width="70" Height="40" Background="Transparent" Click="AddPlugin_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="35" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="../../Images/dark.add.below.png"/>
+                                    <TextBlock FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontWeight="Normal">Add</TextBlock>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="DeletePlugin" Margin="5 0 10 0" BorderThickness="0" Width="80" Height="40" Background="Transparent" Click="DeletePlugin_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="35" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center"  Source="../../Images/dark.delete.png"/>
+                                    <TextBlock FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" TextBlock.FontWeight="Normal">Delete</TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                        <Border Grid.Row="2" Background="Transparent" BorderThickness="1,1,1,1" Margin="5 0 0 0" BorderBrush="{StaticResource BorderContent}">
+                            <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding Path=Plugins.Assembly}">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn CanUserResize="False">
+                                        <DataGridTemplateColumn.HeaderTemplate>
+                                            <DataTemplate>
+                                                <CheckBox IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.HeaderTemplate>
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox Margin="9 0 0 0" IsChecked="{Binding Path=IsSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="Assembly File" IsReadOnly="True" Width="180" Binding="{Binding AssemblyFile}" />
+                                    <DataGridTextColumn Header="Type" IsReadOnly="True" Width="350" Binding="{Binding Type}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
+
+                    </Grid>
+                </Border>
+
+                <!--Command-->
+                <Grid Grid.Row="3" Margin="0 20 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Button Content="Save" Width="120" VerticalAlignment="Center" HorizontalAlignment="Left"></Button>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+
+</UserControl>

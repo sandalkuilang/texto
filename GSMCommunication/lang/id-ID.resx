@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CMS_ERROR_1" xml:space="preserve">
+    <value>Nomor tidak ditugaskan</value>
+  </data>
+  <data name="CMS_ERROR_10" xml:space="preserve">
+    <value>Panggilan dilarang</value>
+  </data>
+  <data name="CMS_ERROR_111" xml:space="preserve">
+    <value>Protokol error, tidak ditentukan</value>
+  </data>
+  <data name="CMS_ERROR_127" xml:space="preserve">
+    <value>Internetworking, tidak ditentukan</value>
+  </data>
+  <data name="CMS_ERROR_128" xml:space="preserve">
+    <value>Telematika internetworking tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_129" xml:space="preserve">
+    <value>Pesan singkat tipe 0 tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_130" xml:space="preserve">
+    <value>Tidak dapat menggantikan pesan singkat</value>
+  </data>
+  <data name="CMS_ERROR_143" xml:space="preserve">
+    <value>Tidak disebutkan TP-PID error</value>
+  </data>
+  <data name="CMS_ERROR_144" xml:space="preserve">
+    <value>Data skema kode tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_145" xml:space="preserve">
+    <value>Kelas pesan tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_159" xml:space="preserve">
+    <value>Tidak disebutkan TP-DCS error</value>
+  </data>
+  <data name="CMS_ERROR_160" xml:space="preserve">
+    <value>Command tidak dapat dikerjakan</value>
+  </data>
+  <data name="CMS_ERROR_161" xml:space="preserve">
+    <value>Perintah tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_175" xml:space="preserve">
+    <value>Tidak disebutkan TP-Command error</value>
+  </data>
+  <data name="CMS_ERROR_176" xml:space="preserve">
+    <value>TPDU tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_192" xml:space="preserve">
+    <value>SC sibuk</value>
+  </data>
+  <data name="CMS_ERROR_193" xml:space="preserve">
+    <value>Tidak SC berlangganan</value>
+  </data>
+  <data name="CMS_ERROR_194" xml:space="preserve">
+    <value>SC Sistem Kegagalan</value>
+  </data>
+  <data name="CMS_ERROR_195" xml:space="preserve">
+    <value>Alamat SME salah</value>
+  </data>
+  <data name="CMS_ERROR_196" xml:space="preserve">
+    <value>Tujuan SME ditolak</value>
+  </data>
+  <data name="CMS_ERROR_197" xml:space="preserve">
+    <value>SM Ditolak-Duplikat SM</value>
+  </data>
+  <data name="CMS_ERROR_198" xml:space="preserve">
+    <value>TP-VPF tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_199" xml:space="preserve">
+    <value>TP-VP tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_208" xml:space="preserve">
+    <value>Penyimpanan D0 SIM SMS penuh</value>
+  </data>
+  <data name="CMS_ERROR_209" xml:space="preserve">
+    <value>Tidak ada Penyimpanan SMS kemampuan dalam SIM</value>
+  </data>
+  <data name="CMS_ERROR_21" xml:space="preserve">
+    <value>Transfer pesan singkat ditolak</value>
+  </data>
+  <data name="CMS_ERROR_210" xml:space="preserve">
+    <value>Terjadi Kerusakan di MS</value>
+  </data>
+  <data name="CMS_ERROR_211" xml:space="preserve">
+    <value>Kapasitas memori melebihi</value>
+  </data>
+  <data name="CMS_ERROR_212" xml:space="preserve">
+    <value>Sim aplikasi toolkit sibuk</value>
+  </data>
+  <data name="CMS_ERROR_213" xml:space="preserve">
+    <value>SIM download data error</value>
+  </data>
+  <data name="CMS_ERROR_255" xml:space="preserve">
+    <value>Tidak disebutkan kesalahan penyebab</value>
+  </data>
+  <data name="CMS_ERROR_27" xml:space="preserve">
+    <value>Tujuan dari layanan sedang dalam perbaikan</value>
+  </data>
+  <data name="CMS_ERROR_28" xml:space="preserve">
+    <value>Unindentified pelanggan</value>
+  </data>
+  <data name="CMS_ERROR_29" xml:space="preserve">
+    <value>fasilitas ditolak</value>
+  </data>
+  <data name="CMS_ERROR_30" xml:space="preserve">
+    <value>Tidak diketahui pelanggan</value>
+  </data>
+  <data name="CMS_ERROR_300" xml:space="preserve">
+    <value>ME gagal</value>
+  </data>
+  <data name="CMS_ERROR_301" xml:space="preserve">
+    <value>Layanan SMS di ME dipesan</value>
+  </data>
+  <data name="CMS_ERROR_302" xml:space="preserve">
+    <value>Operasi tidak diijinkan</value>
+  </data>
+  <data name="CMS_ERROR_303" xml:space="preserve">
+    <value>Operasi tidak didukung</value>
+  </data>
+  <data name="CMS_ERROR_304" xml:space="preserve">
+    <value>PDU mode parameter salah</value>
+  </data>
+  <data name="CMS_ERROR_305" xml:space="preserve">
+    <value>Text mode parameter salah</value>
+  </data>
+  <data name="CMS_ERROR_310" xml:space="preserve">
+    <value>SIM not inserted</value>
+  </data>
+  <data name="CMS_ERROR_311" xml:space="preserve">
+    <value>SIM PIN diperlukan</value>
+  </data>
+  <data name="CMS_ERROR_312" xml:space="preserve">
+    <value>PH-SIM PIN diperlukan</value>
+  </data>
+  <data name="CMS_ERROR_313" xml:space="preserve">
+    <value>SIM gagal</value>
+  </data>
+  <data name="CMS_ERROR_314" xml:space="preserve">
+    <value>SIM sibuk</value>
+  </data>
+  <data name="CMS_ERROR_315" xml:space="preserve">
+    <value>SIM salah</value>
+  </data>
+  <data name="CMS_ERROR_316" xml:space="preserve">
+    <value>SIM PUK diperlukan</value>
+  </data>
+  <data name="CMS_ERROR_317" xml:space="preserve">
+    <value>SIM PIN2 diperlukan</value>
+  </data>
+  <data name="CMS_ERROR_318" xml:space="preserve">
+    <value>SIM PUK2 diperlukan</value>
+  </data>
+  <data name="CMS_ERROR_320" xml:space="preserve">
+    <value>Memory gagal</value>
+  </data>
+  <data name="CMS_ERROR_321" xml:space="preserve">
+    <value>Memory index salah</value>
+  </data>
+  <data name="CMS_ERROR_322" xml:space="preserve">
+    <value>Memory penuh</value>
+  </data>
+  <data name="CMS_ERROR_330" xml:space="preserve">
+    <value>Alamat SMSC tidak diketahui</value>
+  </data>
+  <data name="CMS_ERROR_331" xml:space="preserve">
+    <value>Tidak ada Jaringan</value>
+  </data>
+  <data name="CMS_ERROR_332" xml:space="preserve">
+    <value>jaringan batas waktu </value>
+  </data>
+  <data name="CMS_ERROR_340" xml:space="preserve">
+    <value>Tidak ada CNMA + diharapkan</value>
+  </data>
+  <data name="CMS_ERROR_38" xml:space="preserve">
+    <value>Jaringan rusak</value>
+  </data>
+  <data name="CMS_ERROR_41" xml:space="preserve">
+    <value>Sementara gagal</value>
+  </data>
+  <data name="CMS_ERROR_42" xml:space="preserve">
+    <value>Macet</value>
+  </data>
+  <data name="CMS_ERROR_47" xml:space="preserve">
+    <value>Recources tidak tersedia</value>
+  </data>
+  <data name="CMS_ERROR_50" xml:space="preserve">
+    <value>Requested facility not subscribed</value>
+  </data>
+  <data name="CMS_ERROR_500" xml:space="preserve">
+    <value>Fasilitas Diminta tidak berlangganan</value>
+  </data>
+  <data name="CMS_ERROR_512" xml:space="preserve">
+    <value>Pengguna membatalkan</value>
+  </data>
+  <data name="CMS_ERROR_513" xml:space="preserve">
+    <value>Tidak dapat menyimpan</value>
+  </data>
+  <data name="CMS_ERROR_514" xml:space="preserve">
+    <value>Status salah</value>
+  </data>
+  <data name="CMS_ERROR_515" xml:space="preserve">
+    <value>Device busy or Invalid Character in string</value>
+  </data>
+  <data name="CMS_ERROR_516" xml:space="preserve">
+    <value>panjang tidak valid</value>
+  </data>
+  <data name="CMS_ERROR_517" xml:space="preserve">
+    <value>Karakter tidak valid dalam PDU</value>
+  </data>
+  <data name="CMS_ERROR_518" xml:space="preserve">
+    <value>Parameter tidak valid</value>
+  </data>
+  <data name="CMS_ERROR_519" xml:space="preserve">
+    <value>Karakter atau Panjang tidak valid </value>
+  </data>
+  <data name="CMS_ERROR_520" xml:space="preserve">
+    <value>Karakter tidak valid dalam teks</value>
+  </data>
+  <data name="CMS_ERROR_521" xml:space="preserve">
+    <value>Timer berakhir</value>
+  </data>
+  <data name="CMS_ERROR_522" xml:space="preserve">
+    <value>Sementara Operasi tidak diijinkan</value>
+  </data>
+  <data name="CMS_ERROR_532" xml:space="preserve">
+    <value>SIM tidak siap</value>
+  </data>
+  <data name="CMS_ERROR_534" xml:space="preserve">
+    <value>Cell Broadcast kesalahan yang tidak diketahui</value>
+  </data>
+  <data name="CMS_ERROR_535" xml:space="preserve">
+    <value>Protocol stack busy</value>
+  </data>
+  <data name="CMS_ERROR_538" xml:space="preserve">
+    <value>Parameter tidak valid</value>
+  </data>
+  <data name="CMS_ERROR_69" xml:space="preserve">
+    <value>Fasilitas yang diminta tidak diterapkan</value>
+  </data>
+  <data name="CMS_ERROR_8" xml:space="preserve">
+    <value>Operator ditentukan pembatasan</value>
+  </data>
+  <data name="CMS_ERROR_81" xml:space="preserve">
+    <value>Valid mentransfer pesan singkat nilai referensi</value>
+  </data>
+  <data name="CMS_ERROR_95" xml:space="preserve">
+    <value>Valid pesan yang tidak ditentukan</value>
+  </data>
+  <data name="CMS_ERROR_96" xml:space="preserve">
+    <value>Valid informasi wajib</value>
+  </data>
+  <data name="CMS_ERROR_97" xml:space="preserve">
+    <value>Pesan non jenis ada atau tidak dilaksanakan</value>
+  </data>
+  <data name="CMS_ERROR_98" xml:space="preserve">
+    <value>Tidak kompatibel dengan protokol pesan singkat pesan</value>
+  </data>
+  <data name="CMS_ERROR_99" xml:space="preserve">
+    <value>Informasi elemen non-ada atau tidak implemen</value>
+  </data>
+</root>
