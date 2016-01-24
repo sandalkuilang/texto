@@ -8,3 +8,8 @@ D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\Cryptography.pdb
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\Cryptography\obj\Release\Cryptography.dll
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\Cryptography\obj\Release\Cryptography.pdb
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\Cryptography\obj\Release\Cryptography.csprojResolveAssemblyReference.cache
+D:\git.texto\Binary\Cryptography.dll
+D:\git.texto\Binary\Cryptography.pdb
+D:\git.texto\Cryptography\obj\Release\Cryptography.dll
+D:\git.texto\Cryptography\obj\Release\Cryptography.pdb
+D:\git.texto\Cryptography\obj\Release\Cryptography.csprojResolveAssemblyReference.cache

@@ -8,3 +8,8 @@ D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMClient.pdb
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMClient\obj\Release\GSMClient.csprojResolveAssemblyReference.cache
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMClient\obj\Release\GSMClient.dll
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMClient\obj\Release\GSMClient.pdb
+D:\git.texto\Binary\GSMClient.dll
+D:\git.texto\Binary\GSMClient.pdb
+D:\git.texto\GSMClient\obj\Release\GSMClient.csprojResolveAssemblyReference.cache
+D:\git.texto\GSMClient\obj\Release\GSMClient.dll
+D:\git.texto\GSMClient\obj\Release\GSMClient.pdb

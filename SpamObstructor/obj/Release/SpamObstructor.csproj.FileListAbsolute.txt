@@ -9,3 +9,14 @@ D:\git.toyota.co.id\Project-SMSG\SMSGateway\SpamObstructor\bin\Release\GSMCommun
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\SpamObstructor\obj\Release\SpamObstructor.csprojResolveAssemblyReference.cache
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\SpamObstructor\obj\Release\SpamObstructor.dll
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\SpamObstructor\obj\Release\SpamObstructor.pdb
+D:\git.texto\SpamObstructor\bin\Release\SpamObstructor.dll
+D:\git.texto\SpamObstructor\bin\Release\SpamObstructor.pdb
+D:\git.texto\SpamObstructor\bin\Release\GSMCommunication.dll
+D:\git.texto\SpamObstructor\bin\Release\Newtonsoft.Json.dll
+D:\git.texto\SpamObstructor\bin\Release\Texaco.Container.dll
+D:\git.texto\SpamObstructor\bin\Release\Texaco.Database.dll
+D:\git.texto\SpamObstructor\bin\Release\Texaco.Database.Petapoco.dll
+D:\git.texto\SpamObstructor\bin\Release\GSMCommunication.pdb
+D:\git.texto\SpamObstructor\obj\Release\SpamObstructor.csprojResolveAssemblyReference.cache
+D:\git.texto\SpamObstructor\obj\Release\SpamObstructor.dll
+D:\git.texto\SpamObstructor\obj\Release\SpamObstructor.pdb

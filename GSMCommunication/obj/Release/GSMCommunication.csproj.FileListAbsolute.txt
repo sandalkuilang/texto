@@ -13,3 +13,11 @@ D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMComm
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.csproj.GenerateResource.Cache
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.dll
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMCommunication\obj\Release\GSMCommunication.pdb
+D:\git.texto\Binary\GSMCommunication.dll
+D:\git.texto\Binary\GSMCommunication.pdb
+D:\git.texto\GSMCommunication\obj\Release\GSMCommunication.lang.en-US.resources
+D:\git.texto\GSMCommunication\obj\Release\GSMCommunication.lang.id-ID.resources
+D:\git.texto\GSMCommunication\obj\Release\GSMCommunication.csproj.GenerateResource.Cache
+D:\git.texto\GSMCommunication\obj\Release\GSMCommunication.dll
+D:\git.texto\GSMCommunication\obj\Release\GSMCommunication.pdb
+D:\git.texto\GSMCommunication\obj\Release\GSMCommunication.csprojResolveAssemblyReference.cache

@@ -7,3 +7,8 @@ D:\git.toyota.co.id\Project-SMSG\SMSGateway\Binary\GSMServerModel.pdb
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServerModel\obj\Release\GSMServerModel.dll
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServerModel\obj\Release\GSMServerModel.pdb
 D:\git.toyota.co.id\Project-SMSG\SMSGateway\GSMServerModel\obj\Release\GSMServerModel.csprojResolveAssemblyReference.cache
+D:\git.texto\Binary\GSMServerModel.dll
+D:\git.texto\Binary\GSMServerModel.pdb
+D:\git.texto\GSMServerModel\obj\Release\GSMServerModel.dll
+D:\git.texto\GSMServerModel\obj\Release\GSMServerModel.pdb
+D:\git.texto\GSMServerModel\obj\Release\GSMServerModel.csprojResolveAssemblyReference.cache

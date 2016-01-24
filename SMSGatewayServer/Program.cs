@@ -191,13 +191,16 @@ namespace SMSGatewayServer
             /// detect for stack overflow
             StackTrace stackTrace = new StackTrace();           // get call stack
             StackFrame[] stackFrames = stackTrace.GetFrames();  // get method calls (frames) 
-            if (stackFrames[2].GetNativeOffset() == stackFrames[4].GetNativeOffset())
+            if (stackFrames.Length > 4)
             {
-                server.Dispose();
-                createServer(null);
-                GetInformation();
-                ReceiveInput();
-                return;
+                if (stackFrames[2].GetNativeOffset() == stackFrames[4].GetNativeOffset())
+                {
+                    server.Dispose();
+                    createServer(null);
+                    GetInformation();
+                    ReceiveInput();
+                    return;
+                }
             }
 
             while (deviceUndetect)
