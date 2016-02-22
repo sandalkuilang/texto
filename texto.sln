@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleGenericGSM", "SampleG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSMServer", "GSMServer\GSMServer.csproj", "{7F7C2541-57BF-4842-BCFC-F708C5AF3F3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography", "Cryptography\Cryptography.csproj", "{65E5603C-5D04-4B3E-A5C5-52C36F5F0CC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto", "Cryptography\Crypto.csproj", "{65E5603C-5D04-4B3E-A5C5-52C36F5F0CC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSGatewayServer", "SMSGatewayServer\SMSGatewayServer.csproj", "{58E6B49B-FB97-4F7A-BDBD-47C6729607BC}"
 EndProject

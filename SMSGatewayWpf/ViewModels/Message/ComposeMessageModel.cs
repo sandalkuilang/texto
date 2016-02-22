@@ -10,7 +10,7 @@ using System.Collections.ObjectModel;
 using System.Globalization; 
 using SMSGatewayWpf.ViewModels.Configuration.Server;
 using GSMServerModel;
-using Cryptography;
+using Crypto;
 using SMSGatewayWpf.Core.Gateway;
 using Texaco.Database;
 using System.ComponentModel;

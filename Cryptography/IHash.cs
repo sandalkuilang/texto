@@ -1,5 +1,5 @@
 ﻿/*
-    Cryptography
+    Crypto
  
     Copyright (C) 2013 Yudha - yudha_hyp@yahoo.com
 
@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace Cryptography
+namespace Crypto
 {
     public interface IHash : IDisposable
     {

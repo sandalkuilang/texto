@@ -56,9 +56,6 @@
     <ApplicationIcon>texto-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cryptography">
-      <HintPath>..\SMSGateway\GSMClient\bin\Debug\Cryptography.dll</HintPath>
-    </Reference>
     <Reference Include="FirstFloor.ModernUI">
       <HintPath>libs\FirstFloor.ModernUI.dll</HintPath>
     </Reference>
@@ -556,6 +553,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Cryptography\Crypto.csproj">
+      <Project>{65e5603c-5d04-4b3e-a5c5-52c36f5f0cc8}</Project>
+      <Name>Crypto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GSMClient\GSMClient.csproj">
       <Project>{51cad25a-7664-4a42-ba5c-b18da8c88385}</Project>
       <Name>GSMClient</Name>

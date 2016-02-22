@@ -6,7 +6,7 @@ using System.Text;
 using Texaco.Database.Petapoco;
 using Texaco.Database;
 using GSMServerModel;
-using Cryptography;
+using Crypto;
 
 namespace GSMClient
 {

@@ -8,8 +8,8 @@
     <ProjectGuid>{65E5603C-5D04-4B3E-A5C5-52C36F5F0CC8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cryptography</RootNamespace>
-    <AssemblyName>Cryptography</AssemblyName>
+    <RootNamespace>Crypto</RootNamespace>
+    <AssemblyName>Crypto</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

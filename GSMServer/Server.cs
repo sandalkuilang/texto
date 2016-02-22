@@ -24,7 +24,7 @@ using System.Net;
 using GSMServer.Contracts; 
 using System.Diagnostics;
 using GSMCommunication.Feature;
-using Cryptography;
+using Crypto;
 using GSMServerModel;
 using GSMServer.Plugin;
 using GSMServer.Contracts.InternalLogging;

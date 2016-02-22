@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text; 
 using GSMServerModel;
 using System.Net.Sockets;
-using Cryptography;
+using Crypto;
 using System.Configuration;
 using System.Dynamic; 
 

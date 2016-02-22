@@ -1,4 +1,4 @@
-﻿using Cryptography;
+﻿using Crypto;
 using GSMClient;
 using GSMServerModel;
 using System;
@@ -24,8 +24,8 @@ namespace SMSGatewayWpf.Core.Gateway
             header = new Header(signature, "texto-app", "");
             Request = new Request(null, header, null);
             Request.QueueWorkItem = new QueueWorkItem();
-             
-            crypter = new Cryptography.Crypter(new ApplicationSettingKeySym());
+
+            crypter = new Crypto.Crypter(new ApplicationSettingKeySym());
         }
 
         public abstract BaseGatewayConnection Connection { get; set; }

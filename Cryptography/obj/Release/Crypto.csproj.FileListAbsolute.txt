@@ -1,0 +1,4 @@
+D:\GitHub\Texto\Cryptography\obj\Release\Crypto.dll
+D:\GitHub\Texto\Cryptography\obj\Release\Crypto.pdb
+D:\GitHub\Texto\Binary\Crypto.dll
+D:\GitHub\Texto\Binary\Crypto.pdb

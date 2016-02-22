@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Cryptography;
+using Crypto;
 using GSMCommunication.Feature;
 using GSMServer.Contracts;
 using GSMServerModel;

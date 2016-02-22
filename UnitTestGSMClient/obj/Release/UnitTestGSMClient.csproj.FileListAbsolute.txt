@@ -28,3 +28,17 @@ D:\git.texto\UnitTestGSMClient\obj\Release\UnitTestGSMClient.dll
 D:\git.texto\UnitTestGSMClient\obj\Release\UnitTestGSMClient.pdb
 D:\git.texto\UnitTestGSMClient\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\git.texto\UnitTestGSMClient\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\UnitTestGSMClient.dll
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\UnitTestGSMClient.pdb
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\GSMClient.dll
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\GSMServerModel.dll
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\Texaco.Database.Petapoco.dll
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\Texaco.Database.dll
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\Newtonsoft.Json.dll
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\GSMClient.pdb
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\GSMServerModel.pdb
+D:\GitHub\Texto\UnitTestGSMClient\obj\Release\UnitTestGSMClient.csprojResolveAssemblyReference.cache
+D:\GitHub\Texto\UnitTestGSMClient\obj\Release\UnitTestGSMClient.dll
+D:\GitHub\Texto\UnitTestGSMClient\obj\Release\UnitTestGSMClient.pdb
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\Crypto.dll
+D:\GitHub\Texto\UnitTestGSMClient\bin\Release\Crypto.pdb

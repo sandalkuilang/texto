@@ -54,9 +54,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cryptography\Cryptography.csproj">
+    <ProjectReference Include="..\Cryptography\Crypto.csproj">
       <Project>{65e5603c-5d04-4b3e-a5c5-52c36f5f0cc8}</Project>
-      <Name>Cryptography</Name>
+      <Name>Crypto</Name>
     </ProjectReference>
     <ProjectReference Include="..\GSMClient\GSMClient.csproj">
       <Project>{51CAD25A-7664-4A42-BA5C-B18DA8C88385}</Project>

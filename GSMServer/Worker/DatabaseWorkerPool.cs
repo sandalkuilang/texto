@@ -1,4 +1,4 @@
-﻿using Cryptography;
+﻿using Crypto;
 using GSMServer.Configuration;
 using GSMServer.Worker.Model;
 using Newtonsoft.Json;
@@ -15,7 +15,7 @@ namespace GSMServer.Worker
 {
     internal class DatabaseWorkerPool : IQueue<PacketEventArgs>
     {
-        Cryptography.Crypter crypter = new Cryptography.Crypter(new DefaultConfigurationKey());
+        Crypto.Crypter crypter = new Crypto.Crypter(new DefaultConfigurationKey());
 
         private readonly object syncLock = new object();
 

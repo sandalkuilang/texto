@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GSMServerModel;
-using Cryptography;
+using Crypto;
 
 namespace UnitTestGSMClient
 {

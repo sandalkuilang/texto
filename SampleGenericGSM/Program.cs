@@ -19,7 +19,7 @@ using System.Threading;
 using System.Threading.Tasks; 
 using System.Xml.Serialization;
 using System.Xml;
-using Cryptography;
+using Crypto;
 using System.Configuration;
 using GSMClient;
 using GSMServerModel; 
@@ -121,7 +121,7 @@ namespace Client
         {
             TcpClient client = (TcpClient)target;
             NetworkStream stream = client.GetStream();
-            Crypter c = new Cryptography.Crypter(new DefaultConfigurationKey());
+            Crypter c = new Crypto.Crypter(new DefaultConfigurationKey());
             StringBuilder decrypt = new StringBuilder();
             byte[] read;
             int readInt;

@@ -1,5 +1,5 @@
 ﻿/*
-    Cryptography
+    Crypto
  
     Copyright (C) 2013 Yudha - yudha_hyp@yahoo.com
 
@@ -15,7 +15,7 @@ using System.Text;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace Cryptography
+namespace Crypto
 {
     public class SHA512Hash : IHash, IDisposable
     {

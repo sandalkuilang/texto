@@ -13,3 +13,8 @@ D:\git.texto\Binary\GSMClient.pdb
 D:\git.texto\GSMClient\obj\Release\GSMClient.csprojResolveAssemblyReference.cache
 D:\git.texto\GSMClient\obj\Release\GSMClient.dll
 D:\git.texto\GSMClient\obj\Release\GSMClient.pdb
+D:\GitHub\Texto\Binary\GSMClient.dll
+D:\GitHub\Texto\Binary\GSMClient.pdb
+D:\GitHub\Texto\GSMClient\obj\Release\GSMClient.csprojResolveAssemblyReference.cache
+D:\GitHub\Texto\GSMClient\obj\Release\GSMClient.dll
+D:\GitHub\Texto\GSMClient\obj\Release\GSMClient.pdb

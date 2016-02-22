@@ -1,5 +1,5 @@
 ﻿/*
-    Cryptography
+    Crypto
  
     Copyright (C) 2013 Yudha - yudha_hyp@yahoo.com
 
@@ -15,9 +15,9 @@ using System.Text;
 using System.Security;
 using System.Security.Cryptography;
 using System.IO;
-using Cryptography;
+using Crypto;
 
-namespace Cryptography
+namespace Crypto
 {
     [System.Diagnostics.DebuggerNonUserCode]
     public class SymmetricEncryption : IEncryption, IDisposable

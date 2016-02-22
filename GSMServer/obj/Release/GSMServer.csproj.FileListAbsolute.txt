@@ -22,3 +22,11 @@ D:\git.texto\Binary\GSMServer.pdb
 D:\git.texto\GSMServer\obj\Release\GSMServer.csprojResolveAssemblyReference.cache
 D:\git.texto\GSMServer\obj\Release\GSMServer.dll
 D:\git.texto\GSMServer\obj\Release\GSMServer.pdb
+D:\GitHub\Texto\Binary\SqlFiles\CountQueueWorkItem.txt
+D:\GitHub\Texto\Binary\SqlFiles\GetAllQueueWorkItem.txt
+D:\GitHub\Texto\Binary\SqlFiles\GetQueueWorkItem.txt
+D:\GitHub\Texto\Binary\GSMServer.dll
+D:\GitHub\Texto\Binary\GSMServer.pdb
+D:\GitHub\Texto\GSMServer\obj\Release\GSMServer.csprojResolveAssemblyReference.cache
+D:\GitHub\Texto\GSMServer\obj\Release\GSMServer.dll
+D:\GitHub\Texto\GSMServer\obj\Release\GSMServer.pdb

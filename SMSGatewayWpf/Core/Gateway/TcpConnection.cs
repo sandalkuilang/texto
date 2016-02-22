@@ -1,4 +1,4 @@
-﻿using Cryptography;
+﻿using Crypto;
 using GSMClient;
 using SMSGatewayWpf.Core.Gateway;
 using System;

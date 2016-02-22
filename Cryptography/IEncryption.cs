@@ -1,5 +1,5 @@
 ﻿/*
-    Cryptography
+    Crypto
  
     Copyright (C) 2013 Yudha - yudha_hyp@yahoo.com
 
@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Cryptography
+namespace Crypto
 {
     interface IEncryption
     {

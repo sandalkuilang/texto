@@ -1,4 +1,4 @@
-﻿using Cryptography;
+﻿using Crypto;
 using GSMServerModel;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace GSMClient
     public abstract class BaseGSMCommand : IGSMCommand
     {
         private const string dataFormat = "{0}</>{1}";
-        private Cryptography.Crypter crypter;
+        private Crypto.Crypter crypter;
         public IKeySym PublicKey { get; set; }
         public IGSMConnection Connection { get; set; } 
             

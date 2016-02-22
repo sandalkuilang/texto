@@ -19,7 +19,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
 using GSMServer.Contracts;
-using Cryptography;
+using Crypto;
 using System.Configuration;
 using System.Diagnostics;
 using System.Threading;

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GSMClient;
 using System.Net.Sockets;
-using Cryptography;
+using Crypto;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading;

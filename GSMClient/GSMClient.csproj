@@ -73,9 +73,9 @@
     <Compile Include="TcpConnection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cryptography\Cryptography.csproj">
+    <ProjectReference Include="..\Cryptography\Crypto.csproj">
       <Project>{65E5603C-5D04-4B3E-A5C5-52C36F5F0CC8}</Project>
-      <Name>Cryptography</Name>
+      <Name>Crypto</Name>
     </ProjectReference>
     <ProjectReference Include="..\GSMServerModel\GSMServerModel.csproj">
       <Project>{01D47884-04CD-4886-9239-B0C5E665C46C}</Project>
