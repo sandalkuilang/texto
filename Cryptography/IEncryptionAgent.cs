@@ -15,7 +15,7 @@ using System.Text;
 
 namespace Crypto
 {
-    interface IEncryption
+    public interface IEncryptionAgent
     {
         byte[] Encrypt(byte[] data);
         byte[] Decrypt(byte[] data);

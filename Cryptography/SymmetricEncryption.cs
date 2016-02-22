@@ -20,7 +20,7 @@ using Crypto;
 namespace Crypto
 {
     [System.Diagnostics.DebuggerNonUserCode]
-    public class SymmetricEncryption : IEncryption, IDisposable
+    public class SymmetricEncryption : IEncryptionAgent, IDisposable
     {
         private readonly SymmetricAlgorithm algorithm;
         private byte[] key; 

@@ -17,7 +17,7 @@ using System.Reflection;
 
 namespace Crypto
 {
-    public class Crypter
+    public class Crypter : IEncryptionAgent
     {
         private IKeySym privateKey;
 
@@ -51,7 +51,17 @@ namespace Crypto
                 result = Convert.ToBase64String(sym.Encrypt(ASCIIEncoding.ASCII.GetBytes(data)));
             }
             return result;
+        } 
+        public byte[] Encrypt(byte[] data)
+        {
+            string values = System.Text.ASCIIEncoding.ASCII.GetString(data);
+            return System.Text.ASCIIEncoding.ASCII.GetBytes(this.Encrypt(values));
         }
-         
+
+        public byte[] Decrypt(byte[] data)
+        {
+            string values = System.Text.ASCIIEncoding.ASCII.GetString(data);
+            return System.Text.ASCIIEncoding.ASCII.GetBytes(this.Decrypt(values));
+        }
     }
 }

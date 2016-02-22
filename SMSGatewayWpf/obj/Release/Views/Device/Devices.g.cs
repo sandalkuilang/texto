@@ -16,7 +16,6 @@ using FirstFloor.ModernUI.Windows.Converters;
 using FirstFloor.ModernUI.Windows.Navigation;
 using MahApps.Metro.Controls;
 using SMSGatewayWpf.Styles.Controls;
-using SMSGatewayWpf.ViewModels;
 using SMSGatewayWpf.Views.Device;
 using System;
 using System.Diagnostics;

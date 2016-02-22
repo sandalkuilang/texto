@@ -12,3 +12,7 @@ D:\git.texto\Binary\GSMServerModel.pdb
 D:\git.texto\GSMServerModel\obj\Release\GSMServerModel.dll
 D:\git.texto\GSMServerModel\obj\Release\GSMServerModel.pdb
 D:\git.texto\GSMServerModel\obj\Release\GSMServerModel.csprojResolveAssemblyReference.cache
+D:\GitHub\Texto\Binary\GSMServerModel.dll
+D:\GitHub\Texto\Binary\GSMServerModel.pdb
+D:\GitHub\Texto\GSMServerModel\obj\Release\GSMServerModel.dll
+D:\GitHub\Texto\GSMServerModel\obj\Release\GSMServerModel.pdb

@@ -194,7 +194,6 @@ D:\GitHub\Texto\SMSGatewayWpf\bin\Release\Texaco.Container.dll
 D:\GitHub\Texto\SMSGatewayWpf\bin\Release\Texaco.Database.dll
 D:\GitHub\Texto\SMSGatewayWpf\bin\Release\Texaco.Database.Petapoco.dll
 D:\GitHub\Texto\SMSGatewayWpf\bin\Release\GSMClient.pdb
-D:\GitHub\Texto\SMSGatewayWpf\bin\Release\GSMServerModel.pdb
 D:\GitHub\Texto\SMSGatewayWpf\obj\Release\SMSGatewayWpf.csprojResolveAssemblyReference.cache
 D:\GitHub\Texto\SMSGatewayWpf\obj\Release\Resources\Colors.baml
 D:\GitHub\Texto\SMSGatewayWpf\obj\Release\Resources\Global.baml

@@ -48,7 +48,7 @@
     <Compile Include="Crypter.cs" />
     <Compile Include="DetectOpenFiles.cs" />
     <Compile Include="Hash.cs" />
-    <Compile Include="IEncryption.cs" />
+    <Compile Include="IEncryptionAgent.cs" />
     <Compile Include="IHash.cs" />
     <Compile Include="IKeySym.cs" />
     <Compile Include="SHA512Hash.cs" />

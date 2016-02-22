@@ -8,3 +8,7 @@ D:\git.texto\Binary\Sockets.pdb
 D:\git.texto\Sockets\obj\x86\Release\Sockets.dll
 D:\git.texto\Sockets\obj\x86\Release\Sockets.pdb
 D:\git.texto\Sockets\obj\x86\Release\Sockets.csprojResolveAssemblyReference.cache
+D:\GitHub\Texto\Binary\Sockets.dll
+D:\GitHub\Texto\Binary\Sockets.pdb
+D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.dll
+D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.pdb
