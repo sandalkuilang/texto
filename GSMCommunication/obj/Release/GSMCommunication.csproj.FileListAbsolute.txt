@@ -28,3 +28,4 @@ D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.lang.id-ID.resourc
 D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.csproj.GenerateResource.Cache
 D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.dll
 D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.pdb
+D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.csprojResolveAssemblyReference.cache

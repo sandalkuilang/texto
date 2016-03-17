@@ -16,3 +16,4 @@ D:\GitHub\Texto\Binary\GSMServerModel.dll
 D:\GitHub\Texto\Binary\GSMServerModel.pdb
 D:\GitHub\Texto\GSMServerModel\obj\Release\GSMServerModel.dll
 D:\GitHub\Texto\GSMServerModel\obj\Release\GSMServerModel.pdb
+D:\GitHub\Texto\GSMServerModel\obj\Release\GSMServerModel.csprojResolveAssemblyReference.cache

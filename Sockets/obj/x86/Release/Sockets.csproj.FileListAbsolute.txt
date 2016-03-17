@@ -12,3 +12,4 @@ D:\GitHub\Texto\Binary\Sockets.dll
 D:\GitHub\Texto\Binary\Sockets.pdb
 D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.dll
 D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.pdb
+D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.csprojResolveAssemblyReference.cache
