@@ -267,3 +267,6 @@ D:\GitHub\Texto\SMSGatewayWpf\obj\Release\texto.exe
 D:\GitHub\Texto\SMSGatewayWpf\obj\Release\texto.pdb
 D:\GitHub\Texto\SMSGatewayWpf\bin\Release\Crypto.dll
 D:\GitHub\Texto\SMSGatewayWpf\bin\Release\Crypto.pdb
+G:\github\texto\SMSGatewayWpf\bin\Release\texto.exe.config
+G:\github\texto\SMSGatewayWpf\obj\Release\texto.exe
+G:\github\texto\SMSGatewayWpf\obj\Release\texto.pdb
