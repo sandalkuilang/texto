@@ -29,3 +29,11 @@ D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.csproj.GenerateRes
 D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.dll
 D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.pdb
 D:\GitHub\Texto\GSMCommunication\obj\Release\GSMCommunication.csprojResolveAssemblyReference.cache
+G:\github\texto\Binary\GSMCommunication.dll
+G:\github\texto\Binary\GSMCommunication.pdb
+G:\github\texto\GSMCommunication\obj\Release\GSMCommunication.csprojResolveAssemblyReference.cache
+G:\github\texto\GSMCommunication\obj\Release\GSMCommunication.lang.en-US.resources
+G:\github\texto\GSMCommunication\obj\Release\GSMCommunication.lang.id-ID.resources
+G:\github\texto\GSMCommunication\obj\Release\GSMCommunication.csproj.GenerateResource.Cache
+G:\github\texto\GSMCommunication\obj\Release\GSMCommunication.dll
+G:\github\texto\GSMCommunication\obj\Release\GSMCommunication.pdb

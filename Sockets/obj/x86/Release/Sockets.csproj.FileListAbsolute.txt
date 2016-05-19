@@ -13,3 +13,8 @@ D:\GitHub\Texto\Binary\Sockets.pdb
 D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.dll
 D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.pdb
 D:\GitHub\Texto\Sockets\obj\x86\Release\Sockets.csprojResolveAssemblyReference.cache
+G:\github\texto\Binary\Sockets.dll
+G:\github\texto\Binary\Sockets.pdb
+G:\github\texto\Sockets\obj\x86\Release\Sockets.csprojResolveAssemblyReference.cache
+G:\github\texto\Sockets\obj\x86\Release\Sockets.dll
+G:\github\texto\Sockets\obj\x86\Release\Sockets.pdb

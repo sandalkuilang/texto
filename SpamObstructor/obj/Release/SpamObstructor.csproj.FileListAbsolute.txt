@@ -31,3 +31,14 @@ D:\GitHub\Texto\SpamObstructor\bin\Release\GSMCommunication.pdb
 D:\GitHub\Texto\SpamObstructor\obj\Release\SpamObstructor.csprojResolveAssemblyReference.cache
 D:\GitHub\Texto\SpamObstructor\obj\Release\SpamObstructor.dll
 D:\GitHub\Texto\SpamObstructor\obj\Release\SpamObstructor.pdb
+G:\github\texto\SpamObstructor\bin\Release\SpamObstructor.dll
+G:\github\texto\SpamObstructor\bin\Release\SpamObstructor.pdb
+G:\github\texto\SpamObstructor\bin\Release\GSMCommunication.dll
+G:\github\texto\SpamObstructor\bin\Release\Newtonsoft.Json.dll
+G:\github\texto\SpamObstructor\bin\Release\Texaco.Container.dll
+G:\github\texto\SpamObstructor\bin\Release\Texaco.Database.dll
+G:\github\texto\SpamObstructor\bin\Release\Texaco.Database.Petapoco.dll
+G:\github\texto\SpamObstructor\bin\Release\GSMCommunication.pdb
+G:\github\texto\SpamObstructor\obj\Release\SpamObstructor.csprojResolveAssemblyReference.cache
+G:\github\texto\SpamObstructor\obj\Release\SpamObstructor.dll
+G:\github\texto\SpamObstructor\obj\Release\SpamObstructor.pdb

@@ -118,6 +118,12 @@
     </ApplicationDefinition>
     <Compile Include="Core\Audio.cs" />
     <Compile Include="Core\AudioEnum.cs" />
+    <Compile Include="Core\Credential\AuthorizationDelegateCommand.cs" />
+    <Compile Include="Core\Credential\Base64WebConfigurationKey.cs" />
+    <Compile Include="Core\Credential\Custom\AccessLevel.cs" />
+    <Compile Include="Core\Credential\IEncryptionAgent.cs" />
+    <Compile Include="Core\Credential\RijndaelEncryption.cs" />
+    <Compile Include="Core\Credential\SymmetricEncryption.cs" />
     <Compile Include="Core\DatabaseNames.cs" />
     <Compile Include="Core\DefaultAudioService.cs" />
     <Compile Include="Core\Gateway\BaseGatewayConnection.cs" />
@@ -209,6 +215,9 @@
     <Compile Include="ViewModels\Message\ComposeMessageModel.cs" />
     <Compile Include="ViewModels\Message\OutboxCollectionViewSource.cs" />
     <Compile Include="ViewModels\MutableObservableCollection.cs" />
+    <Compile Include="ViewModels\ValidationRules\AuthorizationDelegateCommand.cs" />
+    <Compile Include="ViewModels\ValidationRules\AuthorizationProvider.cs" />
+    <Compile Include="ViewModels\ValidationRules\AuthorizationToVisibilityExtension.cs" />
     <Compile Include="ViewModels\ValidationRules\PassThroughConverter.cs" />
     <Compile Include="ViewModels\Message\MessageSearchEngine.cs" />
     <Compile Include="ViewModels\Message\Spam.cs" />

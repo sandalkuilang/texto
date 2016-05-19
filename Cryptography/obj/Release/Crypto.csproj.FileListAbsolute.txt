@@ -3,3 +3,8 @@ D:\GitHub\Texto\Cryptography\obj\Release\Crypto.pdb
 D:\GitHub\Texto\Binary\Crypto.dll
 D:\GitHub\Texto\Binary\Crypto.pdb
 D:\GitHub\Texto\Cryptography\obj\Release\Crypto.csprojResolveAssemblyReference.cache
+G:\github\texto\Binary\Crypto.dll
+G:\github\texto\Binary\Crypto.pdb
+G:\github\texto\Cryptography\obj\Release\Crypto.csprojResolveAssemblyReference.cache
+G:\github\texto\Cryptography\obj\Release\Crypto.dll
+G:\github\texto\Cryptography\obj\Release\Crypto.pdb
