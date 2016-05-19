@@ -112,7 +112,7 @@
                 
                 <!--copyright-->
                 <Grid Grid.Row="3">
-                    <TextBlock FontSize="12" VerticalAlignment="Center" Foreground="#9b9bac">Copyright 2014-2015</TextBlock>
+                    <TextBlock FontSize="12" VerticalAlignment="Center" Foreground="#9b9bac">Copyright 2014-2016</TextBlock>
                 </Grid>
                 
                 <!--author-->
