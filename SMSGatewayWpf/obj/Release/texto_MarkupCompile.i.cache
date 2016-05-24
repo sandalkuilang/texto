@@ -16,5 +16,5 @@ G:\github\texto\SMSGatewayWpf\App.xaml
 78-1801833431
 MainWindow.xaml;Resources\Colors.xaml;Resources\Global.xaml;Styles\ButtonStyle.xaml;Styles\CheckBoxStyle.xaml;Styles\BackButtonMetroStyle.xaml;Styles\ComboWithCheckboxes.xaml;Styles\MetroListBoxStyle.xaml;Styles\MetroListBoxItemStyle.xaml;Styles\PasswordBoxStyle.xaml;Styles\TextBoxStyle.xaml;Views\About.xaml;Views\Contacts.xaml;Views\Device\Devices.xaml;Views\Device\Call.xaml;Views\Device\Configuration.xaml;Views\Device\General.xaml;Views\Device\Phonebook.xaml;Views\Device\Port.xaml;Views\Device\SMS.xaml;Views\Dialogs\ComposeContact.xaml;Views\Dialogs\ComposeMessage.xaml;Views\Dialogs\LookupContact.xaml;Views\Dialogs\Plugin.xaml;Views\Dialogs\SerialPort.xaml;Views\Message\Draft.xaml;Views\Home.xaml;Views\Message\Inbox.xaml;Views\Message\Messages.xaml;Views\Message\Outbox.xaml;Views\Message\Queue.xaml;Views\Settings.xaml;Views\Message\Spam.xaml;Views\Message\Trash.xaml;
 
-False
+True
 

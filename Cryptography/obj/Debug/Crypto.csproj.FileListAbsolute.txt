@@ -1,0 +1,4 @@
+G:\github\texto\Cryptography\bin\Debug\Crypto.dll
+G:\github\texto\Cryptography\bin\Debug\Crypto.pdb
+G:\github\texto\Cryptography\obj\Debug\Crypto.dll
+G:\github\texto\Cryptography\obj\Debug\Crypto.pdb

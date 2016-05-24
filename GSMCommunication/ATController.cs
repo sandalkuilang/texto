@@ -49,14 +49,16 @@ namespace GSMCommunication
         public ATController(string portName, int baudRate, Parity parity, StopBits stopBits, int dataBits, Handshake handShake)
             : base(portName, baudRate, parity, stopBits, dataBits, handShake)
         { 
-            this.Init(portName, baudRate, parity, stopBits, dataBits, handShake); 
+            this.Init(portName, baudRate, parity, stopBits, dataBits, handShake);    
         }
 
         private void Init(string portName, int baudRate, Parity parity, StopBits stopBits, int dataBits, Handshake handShake)
-        { 
-            base.driver.ErrorReceived += driver_ErrorReceived;
+        {
+            
             base.driver.ReadTimeout = 500;
             base.driver.WriteTimeout = 500;
+            
+            base.driver.ErrorReceived += driver_ErrorReceived;
 
             //receiveResponse = true;
             encode = new System.Text.UTF8Encoding(); 

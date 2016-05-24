@@ -36,3 +36,11 @@ D:\git.texto\GSMCommunication\obj\Debug\GSMCommunication.csproj.GenerateResource
 D:\git.texto\GSMCommunication\obj\Debug\GSMCommunication.dll
 D:\git.texto\GSMCommunication\obj\Debug\GSMCommunication.pdb
 D:\git.texto\GSMCommunication\obj\Debug\GSMCommunication.csprojResolveAssemblyReference.cache
+G:\github\texto\GSMCommunication\bin\Debug\GSMCommunication.dll
+G:\github\texto\GSMCommunication\bin\Debug\GSMCommunication.pdb
+G:\github\texto\GSMCommunication\obj\Debug\GSMCommunication.csprojResolveAssemblyReference.cache
+G:\github\texto\GSMCommunication\obj\Debug\GSMCommunication.lang.en-US.resources
+G:\github\texto\GSMCommunication\obj\Debug\GSMCommunication.lang.id-ID.resources
+G:\github\texto\GSMCommunication\obj\Debug\GSMCommunication.csproj.GenerateResource.Cache
+G:\github\texto\GSMCommunication\obj\Debug\GSMCommunication.dll
+G:\github\texto\GSMCommunication\obj\Debug\GSMCommunication.pdb

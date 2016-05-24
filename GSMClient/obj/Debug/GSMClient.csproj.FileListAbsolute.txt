@@ -55,3 +55,15 @@ D:\git.texto\GSMClient\bin\Debug\GSMServerModel.pdb
 D:\git.texto\GSMClient\obj\Debug\GSMClient.csprojResolveAssemblyReference.cache
 D:\git.texto\GSMClient\obj\Debug\GSMClient.dll
 D:\git.texto\GSMClient\obj\Debug\GSMClient.pdb
+G:\github\texto\GSMClient\bin\Debug\GSMClient.dll
+G:\github\texto\GSMClient\bin\Debug\GSMClient.pdb
+G:\github\texto\GSMClient\bin\Debug\Crypto.dll
+G:\github\texto\GSMClient\bin\Debug\GSMServerModel.dll
+G:\github\texto\GSMClient\bin\Debug\Newtonsoft.Json.dll
+G:\github\texto\GSMClient\bin\Debug\Texaco.Database.dll
+G:\github\texto\GSMClient\bin\Debug\Texaco.Database.Petapoco.dll
+G:\github\texto\GSMClient\bin\Debug\Crypto.pdb
+G:\github\texto\GSMClient\bin\Debug\GSMServerModel.pdb
+G:\github\texto\GSMClient\obj\Debug\GSMClient.csprojResolveAssemblyReference.cache
+G:\github\texto\GSMClient\obj\Debug\GSMClient.dll
+G:\github\texto\GSMClient\obj\Debug\GSMClient.pdb

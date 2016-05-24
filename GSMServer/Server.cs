@@ -276,8 +276,8 @@ namespace GSMServer
 
             connection.OnBeginExecuting();
  
-            BaseResult<GenericTypeResult<string>> imsi = connection.GetIMSI();
-            if (!string.IsNullOrEmpty(imsi.Response.Result))
+            BaseResult<GenericTypeResult<string>> manufacturer = connection.GetManufacturer();
+            if (!string.IsNullOrEmpty(manufacturer.Response.Result))
             {
                 connection.GetServiceCenter();
                 connection.SetErrorMessageFormat(1);
